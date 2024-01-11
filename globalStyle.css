@@ -1,0 +1,14 @@
+body {
+    background-color: lightyellow;
+}
+.btn {
+    margin-top:30px;
+    font-family: Helvetica, sans-serif;
+    background-color: lightgrey;
+    padding: 15px 32px;
+}
+
+h1 {
+    font-family: Helvetica, sans-serif;
+    font-size: 40px;
+}
