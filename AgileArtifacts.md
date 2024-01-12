@@ -5,8 +5,8 @@
 ~~ Formatting landing page ~~ (Added Step)
 ~~ 2. Creating a logo for the application and adding it to the app ~~ 
 ~~ 3. Testing if the buttons work ~~
-4. Creating two addition blank pages 
-5. Linking them to their respective buttons
+~~ 4. Creating two addition blank pages ~~ (Three blank pages due to added button)
+~~ 5. Linking them to their respective buttons ~~
 
 ## Increment (what must be achieved by the end of the sprint)
 1. Landing page with two buttons 
