@@ -1,6 +1,6 @@
 ## Product Backlog
-1. Landing page with two buttons 
-2. Create and add a Logo
+~~ 1. Landing page with two buttons ~~
+~~ 2. Create and add a Logo ~~
 3. Connect the two buttons to their respective pages 
 4. Timer page with three options
 5. Connecting page with three buttons and graphics 

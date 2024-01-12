@@ -1,3 +1,3 @@
 function timer() {
-    alert("Hello World");
+    window.location.href="./timer.html";
     }
