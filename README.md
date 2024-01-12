@@ -6,6 +6,4 @@ More details to be added later
 Click title link for backlog
 
 ## [Agile Artifacts](/AgileArtifacts.md)
-1. Landing page with two buttons 
-2. Create and add a Logo
-3. Connect the two buttons to their respective pages 
+Title Link to Agile Artifacts
