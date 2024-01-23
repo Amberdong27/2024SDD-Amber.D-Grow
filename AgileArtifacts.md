@@ -9,6 +9,7 @@
 - Let graphics changing according to if its being used (NEW)
 - Add a pause button and a stop button after a time is set (NEW)
 - Add a reset button for after it finishes (NEW)
+- Maybe added a notification API (NEW)
 
 
 ## Increment (what must be achieved by the end of the sprint)
