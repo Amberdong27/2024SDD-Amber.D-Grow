@@ -8,3 +8,4 @@ function planner() {
 function achievement() {
     window.location.href="./achievement.html";
     }
+
