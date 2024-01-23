@@ -6,7 +6,7 @@
 - ~~ Added three select time options ~~ (NEW)
 - ~~ Added a return to landing page button ~~ (NEW)
 - Added Timer/Countdown Timer to page (NEW)
-- Let graphics changing according to if its being used (NEW)
+- Let graphics changing according to if its being used (partially done)
 - Add a pause button and a stop button after a time is set (NEW)
 - Add a reset button for after it finishes (NEW)
 - Maybe added a notification API (NEW)
