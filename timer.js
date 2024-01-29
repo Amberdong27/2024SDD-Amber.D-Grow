@@ -1,4 +1,4 @@
-function Timer (id) {
+function Timer(clicked) {
   plantGraphic.src = "/images/altpot.gif";
   b1.disabled = true;
   b1.style.visibility = "hidden";
@@ -11,14 +11,16 @@ function Timer (id) {
   end.disabled = false;
   end.style.visibility = "visible";
 
-  alert(id);
-  var time = id;
+  alert(clicked);
+  var time = clicked;
   
-  if (time = '1') { 
+ if (time == 'b1') { 
     alert("30mins");
-  } else if (time = '2') {
+  } 
+  else if (time == 'b2') {
     alert("1 hour");
-  } else {
+  } 
+  else {
     alert("2 hour");
   }
 }
@@ -27,26 +29,13 @@ function End() {
   window.location.reload();
 }
 
-/*function Timer2 () {
-  document.getElementById('plantGraphic').src = "/images/altpot.gif";
-  document.getElementById('B1').disabled = true;
-  document.getElementById('B2').disabled = true;
-  document.getElementById('B3').disabled = true; 
-}
-
-function Timer3 () {
- document.getElementById('plantGraphic').src = "/images/altpot.gif";
-  document.getElementById('B1').disabled = true;
-  document.getElementById('B2').disabled = true;
-  document.getElementById('B3').disabled = true; 
-} */
 
 window.onload = function() {
   plantGraphic = document.getElementById ('plantGraphic');
   restart = document.getElementById ('restart');
   end = document.getElementById('end');
   pause = document.getElementById('pause');
-  b3 = document.getElementById('B3');
-  b2 = document.getElementById('B2');
-  b1 = document.getElementById('B1');
+  b3 = document.getElementById('b3');
+  b2 = document.getElementById('b2');
+  b1 = document.getElementById('b1');
 }
