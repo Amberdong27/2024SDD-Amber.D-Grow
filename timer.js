@@ -43,6 +43,10 @@ function End() {
   restart.style.visibility = "visible";
 }
 
+function Restart() {
+  window.location.reload();
+}
+
 
 window.onload = function() {
   comment = document.getElementById ('text');
