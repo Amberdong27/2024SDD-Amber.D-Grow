@@ -29,14 +29,24 @@ function Timer(clicked) {
 function Pause() {
   plantGraphic.src = "/images/watering.gif";
   comment.innerHTML = "5 minutes Break";
+  pause.disabled = true;
 }
 function End() {
-  window.location.reload();
+  plantGraphic.src = "/images/deadplant.png";
+  extra.innerHTML ="The plant died..."
+  comment.innerHTML = "Take a Break and Restart!";
+  pause.disabled = true;
+  pause.style.visibility = "hidden";
+  end.disabled = true;
+  end.style.visibility = "hidden";
+  restart.disabled = false;
+  restart.style.visibility = "visible";
 }
 
 
 window.onload = function() {
   comment = document.getElementById ('text');
+  extra = document.getElementById ('extra');
   plantGraphic = document.getElementById ('plantGraphic');
   restart = document.getElementById ('restart');
   end = document.getElementById('end');
