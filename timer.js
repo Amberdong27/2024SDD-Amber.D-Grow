@@ -1,4 +1,4 @@
-function Timer1 () {
+function Timer () {
   plantGraphic.src = "/images/altpot.gif";
   b1.disabled = true;
   b1.style.visibility = "hidden";
@@ -10,23 +10,21 @@ function Timer1 () {
   pause.style.visibility = "visible";
   end.disabled = false;
   end.style.visibility = "visible";
-
-
 }
 
-function Timer2 () {
-  /*document.getElementById('plantGraphic').src = "/images/altpot.gif";
+/*function Timer2 () {
+  document.getElementById('plantGraphic').src = "/images/altpot.gif";
   document.getElementById('B1').disabled = true;
   document.getElementById('B2').disabled = true;
-  document.getElementById('B3').disabled = true; */
+  document.getElementById('B3').disabled = true; 
 }
 
 function Timer3 () {
- /* document.getElementById('plantGraphic').src = "/images/altpot.gif";
+ document.getElementById('plantGraphic').src = "/images/altpot.gif";
   document.getElementById('B1').disabled = true;
   document.getElementById('B2').disabled = true;
-  document.getElementById('B3').disabled = true; */
-} 
+  document.getElementById('B3').disabled = true; 
+} */
 
 window.onload = function() {
   plantGraphic = document.getElementById ('plantGraphic');
