@@ -10,6 +10,7 @@ function Timer(clicked) {
   pause.style.visibility = "visible";
   end.disabled = false;
   end.style.visibility = "visible";
+  comment.innerHTML = 'Growing...';
 
   alert(clicked);
   var time = clicked;
@@ -25,12 +26,17 @@ function Timer(clicked) {
   }
 }
 
+function Pause() {
+  plantGraphic.src = "/images/watering.gif";
+  comment.innerHTML = "5 minutes Break";
+}
 function End() {
   window.location.reload();
 }
 
 
 window.onload = function() {
+  comment = document.getElementById ('text');
   plantGraphic = document.getElementById ('plantGraphic');
   restart = document.getElementById ('restart');
   end = document.getElementById('end');
