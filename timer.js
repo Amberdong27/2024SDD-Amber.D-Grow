@@ -1,4 +1,4 @@
-function Timer () {
+function Timer (id) {
   plantGraphic.src = "/images/altpot.gif";
   b1.disabled = true;
   b1.style.visibility = "hidden";
@@ -10,6 +10,21 @@ function Timer () {
   pause.style.visibility = "visible";
   end.disabled = false;
   end.style.visibility = "visible";
+
+  alert(id);
+  var time = id;
+  
+  if (time = '1') { 
+    alert("30mins");
+  } else if (time = '2') {
+    alert("1 hour");
+  } else {
+    alert("2 hour");
+  }
+}
+
+function End() {
+  window.location.reload();
 }
 
 /*function Timer2 () {
