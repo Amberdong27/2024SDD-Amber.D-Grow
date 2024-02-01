@@ -11,8 +11,7 @@ function Timer(clicked) {
   end.disabled = false;
   end.style.visibility = "visible";
   comment.innerHTML = 'Growing...';
-
-  alert(clicked);
+  
   var time = clicked;
   
  if (time == 'b1') { 
