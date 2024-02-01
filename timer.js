@@ -1,5 +1,5 @@
 function Timer(clicked) {
-  plantGraphic.src = "/images/altpot.gif";
+  plantGraphic.src = "images/altpot.gif";
   b1.disabled = true;
   b1.style.visibility = "hidden";
   b2.disabled = true;
@@ -26,12 +26,12 @@ function Timer(clicked) {
 }
 
 function Pause() {
-  plantGraphic.src = "/images/watering.gif";
+  plantGraphic.src = "images/watering.gif";
   comment.innerHTML = "5 minutes Break";
   pause.disabled = true;
 }
 function End() {
-  plantGraphic.src = "/images/deadplant.png";
+  plantGraphic.src = "images/deadplant.png";
   extra.innerHTML ="The plant died..."
   comment.innerHTML = "Take a Break and Restart!";
   pause.disabled = true;
