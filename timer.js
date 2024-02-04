@@ -29,6 +29,7 @@ function Pause() {
   plantGraphic.src = "images/watering.gif";
   comment.innerHTML = "5 minutes Break";
   pause.disabled = true;
+  window.setTimeout(End, 60000);
 }
 function End() {
   plantGraphic.src = "images/deadplant.png";
