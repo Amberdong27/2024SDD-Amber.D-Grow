@@ -15,18 +15,21 @@ function Timer(clicked) {
   var time = clicked;
   
  if (time == 'b1') { 
-    var timeleft = 30;
-    var timerId = setInterval(countdown, 1000);
+    var timeleft = 90;
+      var minute = Math.floor(timeleft/60);
+      var second = timeleft - minute*60;
+      timer.innerHTML = minute +":" + second;
+    
+  /*  var timerId = setInterval(countdown, 90000);
 
     function countdown(){
       if(timeleft == -1){
         clearTimeout(timerId);
         success();
       } else {
-        timer.innerHTML = '00:'+ timeleft;
         timeleft--;
       }
-    }
+    } */
   } 
   else if (time == 'b2') {
     alert("1 hour");
