@@ -15,7 +15,19 @@ function Timer(clicked) {
   var time = clicked;
   
  if (time == 'b1') { 
-    alert("30mins");
+    var timeleft = 30;
+    var timerId = setInterval(countdown, 1000);
+
+    function countdown(){
+      if(timeleft == -1){
+        clearTimeout(timerId);
+        success();
+      } else {
+        timer.innerHTML = '00:'+ timeleft;
+        timeleft--;
+      }
+    }
+    
   } 
   else if (time == 'b2') {
     alert("1 hour");
@@ -23,6 +35,15 @@ function Timer(clicked) {
   else {
     alert("2 hour");
   }
+}
+function success() {
+  plantGraphic.src = "images/Plant.gif";
+  pause.disabled = true;
+  pause.style.visibility = "hidden";
+  end.disabled = true;
+  end.style.visibility = "hidden";
+  restart.disabled = false;
+  restart.style.visibility = "visible";
 }
 
 function Pause() {
@@ -58,4 +79,5 @@ window.onload = function() {
   b3 = document.getElementById('b3');
   b2 = document.getElementById('b2');
   b1 = document.getElementById('b1');
+  timer = document.getElementById('countdown');
 }
