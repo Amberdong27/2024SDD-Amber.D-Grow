@@ -27,7 +27,6 @@ function Timer(clicked) {
         timeleft--;
       }
     }
-    
   } 
   else if (time == 'b2') {
     alert("1 hour");
@@ -38,6 +37,8 @@ function Timer(clicked) {
 }
 function success() {
   plantGraphic.src = "images/Plant.gif";
+  comment.innerHTML = "The plant is fully grown!";
+  extra.innerHTML ="Take a Break!";
   pause.disabled = true;
   pause.style.visibility = "hidden";
   end.disabled = true;
@@ -54,8 +55,8 @@ function Pause() {
 }
 function End() {
   plantGraphic.src = "images/deadplant.png";
-  extra.innerHTML ="The plant died..."
-  comment.innerHTML = "Take a Break and Restart!";
+  comment.innerHTML = "The plant died...";
+  extra.innerHTML ="Take a Break and Restart!"
   pause.disabled = true;
   pause.style.visibility = "hidden";
   end.disabled = true;
