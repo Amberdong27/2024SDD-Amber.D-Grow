@@ -1,3 +1,20 @@
+var startTime;
+var endTime;
+var time;
+
+
+window.onload = function() {
+  comment = document.getElementById ('text');
+  extra = document.getElementById ('extra');
+  plantGraphic = document.getElementById ('plantGraphic');
+  restart = document.getElementById ('restart');
+  end = document.getElementById('end');
+  pause = document.getElementById('pause');
+  b3 = document.getElementById('b3');
+  b2 = document.getElementById('b2');
+  b1 = document.getElementById('b1');
+}
+
 function Timer(clicked) {
   plantGraphic.src = "images/altpot.gif";
   b1.disabled = true;
@@ -10,17 +27,22 @@ function Timer(clicked) {
   pause.style.visibility = "visible";
   end.disabled = false;
   end.style.visibility = "visible";
+  restart.style.visibility = "visible";
+  restart.disabled = false;
   comment.innerHTML = 'Growing...';
-  
-  var time = clicked;
+
+  time = clicked;
+  startTime = new Date();
+  document.getElementById('countdown').innerHTML = startTime.toLocaleTimeString();
   
  if (time == 'b1') { 
-    var timeleft = 90;
+  
+   /* var timeleft = 90;
       var minute = Math.floor(timeleft/60);
       var second = timeleft - minute*60;
       timer.innerHTML = minute +":" + second;
     
-  /*  var timerId = setInterval(countdown, 90000);
+   var timerId = setInterval(countdown, 90000);
 
     function countdown(){
       if(timeleft == -1){
@@ -28,7 +50,7 @@ function Timer(clicked) {
         success();
       } else {
         timeleft--;
-      }
+      } 
     } */
   } 
   else if (time == 'b2') {
@@ -36,7 +58,7 @@ function Timer(clicked) {
   } 
   else {
     alert("2 hour");
-  }
+  } 
 }
 function success() {
   plantGraphic.src = "images/Plant.gif";
@@ -46,8 +68,10 @@ function success() {
   pause.style.visibility = "hidden";
   end.disabled = true;
   end.style.visibility = "hidden";
-  restart.disabled = false;
-  restart.style.visibility = "visible";
+  restart.disabled = true;
+  restart.style.visibility = "hidden";
+  again.disabled = false;
+  again.style.visibility = "visible";
 }
 
 function Pause() {
@@ -64,24 +88,15 @@ function End() {
   pause.style.visibility = "hidden";
   end.disabled = true;
   end.style.visibility = "hidden";
-  restart.disabled = false;
-  restart.style.visibility = "visible";
+  restart.disabled = true;
+  restart.style.visibility = "hidden";
+  again.disabled = false;
+  again.style.visibility = "visible";
 }
-
 function Restart() {
-  window.location.reload();
+  
 }
 
-
-window.onload = function() {
-  comment = document.getElementById ('text');
-  extra = document.getElementById ('extra');
-  plantGraphic = document.getElementById ('plantGraphic');
-  restart = document.getElementById ('restart');
-  end = document.getElementById('end');
-  pause = document.getElementById('pause');
-  b3 = document.getElementById('b3');
-  b2 = document.getElementById('b2');
-  b1 = document.getElementById('b1');
-  timer = document.getElementById('countdown');
+function Again() {
+  window.location.reload();
 }

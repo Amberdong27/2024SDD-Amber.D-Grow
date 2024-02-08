@@ -22,6 +22,10 @@ h1 {
     visibility:hidden;
 }
 
-#restart {
+#again {
     visibility:hidden;
+}
+
+#restart {
+    visibility: hidden;
 }
