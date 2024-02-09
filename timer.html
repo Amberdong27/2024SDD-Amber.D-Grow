@@ -23,22 +23,20 @@
           <div id="countdown">
           </div>
           <div class="col">
-            <button id="b1" type="button" class="btn" onclick="Timer(this.id);">30mins</button>
-            <button id="b2" type="button" class="btn" onclick="Timer(this.id)">1hr</button>
-            <button id="b3" type="button" class="btn" onclick="Timer(this.id)">2hr</button>
+            <input type="text" id="setTime" value="00:00"> 
+            <button id="start" type="button" class="btn" onclick="Timer();">Start</button>
           </div>
           <div class="col">
             <button id="pause" type="button" class="btn" onclick="Pause()" disabled>Pause</button>
             <button id="end" type = "button" class="btn" onclick="End()" disabled>End</button>
             <button id="restart" type = "button" class="btn" onclick="Restart()" disabled>Restart</button>
           </div>
-          <div class="col">
-            <button id="again" type = "button" class="btn" onclick="Again()" disabled>Again</button>
-          </div>
           <div class="col-13">
+            <button id="again" type = "button" class="btn" onclick="Again()" disabled>Again</button>
             <a href= 'index.html'>
-              <button type="button" class="btn">Return</button>
+              <button id="return" type="button" class="btn">RETURN</button>
             </a>
+            <button id="help" class="btn">HELP</button>
             </div>
     </div>
       </div> 
