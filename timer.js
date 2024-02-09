@@ -11,6 +11,7 @@ window.onload = function() {
   end = document.getElementById('end');
   pause = document.getElementById('pause');
   countdown = document.getElementById('countdown');
+  start = document.getElementById('start');
   setInterval(function setTime() { 
     startTime = new Date();
     countdown.innerHTML = startTime.toLocaleTimeString();
@@ -26,6 +27,8 @@ function Timer() {
   restart.style.visibility = "visible";
   restart.disabled = false;
   comment.innerHTML = 'Growing...';
+  start.disabled = true;
+  start.style.visibility = "hidden";
 }
 
 
@@ -65,11 +68,15 @@ function success() {
   end.style.visibility = "hidden";
   restart.disabled = true;
   restart.style.visibility = "hidden";
+  start.disabled = true;
+  start.style.visibility = "hidden";
   again.disabled = false;
   again.style.visibility = "visible";
 }
 
 function Pause() {
+  start.disabled = true;
+  start.style.visibility = "hidden";
   plantGraphic.src = "images/watering.gif";
   comment.innerHTML = "5 minutes Break";
   pause.disabled = true;
@@ -87,6 +94,8 @@ function End() {
   restart.style.visibility = "hidden";
   again.disabled = false;
   again.style.visibility = "visible";
+  start.disabled = true;
+  start.style.visibility = "hidden";
 }
 function Restart() {
 
