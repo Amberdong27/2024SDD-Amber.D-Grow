@@ -1,31 +1,19 @@
 # Agile Artifacts 
 
 ## Sprint backlog list of achievables (annotate changes made during sprint, including data required)
-- ~~ Build base timer page with buttons~~
-- ~~ Added gif elements to timer page ~~ 
-- ~~ Added three select time options ~~ 
-- ~~ Added a return to landing page button ~~ 
-- Added Timer/Countdown Timer to page 
-- ~~Let graphics changing according to if its being used ~~
-- ~~Add a pause button and a stop button after a time is set~~ 
-- ~~Add a reset button for after it finishes~~ 
+- Trying to make a function timer 
 
-
-Changes: 
-- Changing buttons time selection to a text selections 
-- Reorganising button layer outs 
-- Added a Help button for user experience
+Notes: 
+- Shared UAT doc with Timer Page
 
 ## Increment (what must be achieved by the end of the sprint)
-- Build base timer page with buttons
-- Add another elements to timer page (Expanded)
+- Building the timer function 
 
 
 ## Sprint Review 
 ### What challenges did you have
-Trying to figure out how I would improve the layout as ideas come and go and implementing them in the application. Maded the mistake of doing to much in the sprint such as coding the timer function (for next sprint).
+
 ### What did you do well
-I think I did well with the layout of the page and the changing graphics. 
+ 
 
 ### What will you do differently next time
-Next time I would try focus on only the aspect and not over think things
