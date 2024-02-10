@@ -43,7 +43,7 @@ function Start() {
       start.disabled = true;
       start.style.visibility = "hidden";
       setTime.disabled = true;
-      setTime.style.visbility = "hidden";
+      setTime.style.visibility = "hidden";
       extra.innerHTML = "";
       pause.disabled = false;
       pause.style.visibility = "visible";
