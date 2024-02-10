@@ -11,7 +11,7 @@ window.onload = function() {
   comment = document.getElementById ('text');
   extra = document.getElementById ('extra');
   plantGraphic = document.getElementById ('plantGraphic');
-  restart = document.getElementById ('restart');
+  unpause = document.getElementById ('unpause');
   end = document.getElementById('end');
   pause = document.getElementById('pause');
   countdown = document.getElementById('countdown');
@@ -22,22 +22,11 @@ window.onload = function() {
     startTime = new Date();
     clock.innerHTML = "Clock:" + " " + startTime.toLocaleTimeString();
   }, 1000);
+
+  extra.innerHTML = "Please use : inbetween hours and minutes for correct results";
 }
 
 function Start() {
-  plantGraphic.src = "images/altpot.gif";
-  pause.disabled = false;
-  pause.style.visibility = "visible";
-  end.disabled = false;
-  end.style.visibility = "visible";
-  restart.style.visibility = "visible";
-  restart.disabled = false;
-  comment.innerHTML = 'Growing...';
-  start.disabled = true;
-  start.style.visibility = "hidden";
-  setTime.disabled = true;
-  setTime.style.visbility = "hidden";
-
   pickedTime = setTime.value;
   timerMinutes = Number(pickedTime.substring(3));
   timerHours = Number(pickedTime.substring(0,2));
@@ -45,8 +34,72 @@ function Start() {
   endDate = new Date();
   endDate.setHours(startDate.getHours() + timerHours);
   endDate.setMinutes(startDate.getMinutes() + timerMinutes);
-  countdown.innerHTML = endDate.toLocaleString();
+
+    if (startDate.toLocaleTimeString() >= endDate.toLocaleTimeString()||pickedTime.value == "00:00") {
+      countdown.innerHTML = "Write a valid time";
+    } else {
+      countdown.innerHTML = "Study End Time: " + endDate.toLocaleTimeString();
+      plantGraphic.src = "images/altpot.gif";
+      start.disabled = true;
+      start.style.visibility = "hidden";
+      setTime.disabled = true;
+      setTime.style.visbility = "hidden";
+      extra.innerHTML = "";
+      pause.disabled = false;
+      pause.style.visibility = "visible";
+      end.disabled = false;
+      end.style.visibility = "visible";
+      unpause.style.visibility = "visible";
+      unpause.disabled = false;
+      comment.innerHTML = 'Growing...';
+    }
+  }
+
+
+
+
+function success() {
+  plantGraphic.src = "images/Plant.gif";
+  comment.innerHTML = "The plant is fully grown!";
+  extra.innerHTML ="Take a Break!";
+  pause.disabled = true;
+  pause.style.visibility = "hidden";
+  end.disabled = true;
+  end.style.visibility = "hidden";
+  unpause.disabled = true;
+  unpause.style.visibility = "hidden";
+  start.disabled = true;
+  start.style.visibility = "hidden";
+  again.disabled = false;
+  again.style.visibility = "visible";
 }
+
+function Pause() {
+  plantGraphic.src = "images/watering.gif";
+  comment.innerHTML = "5 minutes Break";
+  pause.disabled = true;
+  extra.innerHTML = "Timer Paused";
+  window.setTimeout(End, 60000);
+}
+function End() {
+  plantGraphic.src = "images/deadplant.png";
+  comment.innerHTML = "The plant died...";
+  extra.innerHTML ="Take a Break and Restart!"
+  extra.style.fontWeight = "600";
+  pause.disabled = true;
+  pause.style.visibility = "hidden";
+  end.disabled = true;
+  end.style.visibility = "hidden";
+  unpause.disabled = true;
+  unpause.style.visibility = "hidden";
+  again.disabled = false;
+  again.style.visibility = "visible";
+}
+
+function Again() {
+  window.location.reload();
+}
+
 
 
 /*function R() {
@@ -71,53 +124,3 @@ function startTimer(duration) {
     }
   }, 1000);
 } */
-
-
-
-
-function success() {
-  plantGraphic.src = "images/Plant.gif";
-  comment.innerHTML = "The plant is fully grown!";
-  extra.innerHTML ="Take a Break!";
-  pause.disabled = true;
-  pause.style.visibility = "hidden";
-  end.disabled = true;
-  end.style.visibility = "hidden";
-  restart.disabled = true;
-  restart.style.visibility = "hidden";
-  start.disabled = true;
-  start.style.visibility = "hidden";
-  again.disabled = false;
-  again.style.visibility = "visible";
-}
-
-function Pause() {
-  start.disabled = true;
-  start.style.visibility = "hidden";
-  plantGraphic.src = "images/watering.gif";
-  comment.innerHTML = "5 minutes Break";
-  pause.disabled = true;
-  window.setTimeout(End, 60000);
-}
-function End() {
-  plantGraphic.src = "images/deadplant.png";
-  comment.innerHTML = "The plant died...";
-  extra.innerHTML ="Take a Break and Restart!"
-  pause.disabled = true;
-  pause.style.visibility = "hidden";
-  end.disabled = true;
-  end.style.visibility = "hidden";
-  restart.disabled = true;
-  restart.style.visibility = "hidden";
-  again.disabled = false;
-  again.style.visibility = "visible";
-  start.disabled = true;
-  start.style.visibility = "hidden";
-}
-function Restart() {
-
-}
-
-function Again() {
-  window.location.reload();
-}

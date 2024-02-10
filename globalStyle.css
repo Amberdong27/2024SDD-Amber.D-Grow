@@ -2,7 +2,7 @@ body {
     background-color: lightyellow;
 }
 .btn {
-    margin-top:30px;
+    margin-top: 30px;
     font-family: Helvetica, sans-serif;
     background-color: lightgrey;
     padding: 15px 32px;
@@ -15,6 +15,13 @@ h1 {
     font-weight: bold;
 }
 
+
+#start {
+    margin-top: 0px;
+    margin-left: 5px;
+    padding: 4px 32px;
+    font-weight: bold;
+}
 #pause {
     visibility:hidden;
 }
@@ -29,7 +36,7 @@ h1 {
     margin-right: auto;
 }
 
-#restart {
+#unpause {
     visibility:hidden;
 }
 
@@ -45,5 +52,18 @@ h1 {
     font-family: Helvetica, sans-serif;
     font-size: 25px;
     font-weight: bold;
+}
 
+#setTime {
+    margin-top:15px;
+}
+
+#countdown {
+    margin-top:15px;
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+#extra {
+    font-size: 23px;
 }
