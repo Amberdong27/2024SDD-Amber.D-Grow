@@ -1,7 +1,11 @@
 var startTime;
 var endTime;
 var time;
-
+var startDate 
+var endDate;
+var timerMinutes;
+var timerHours;
+var timerSeconds;
 
 window.onload = function() {
   comment = document.getElementById ('text');
@@ -12,13 +16,15 @@ window.onload = function() {
   pause = document.getElementById('pause');
   countdown = document.getElementById('countdown');
   start = document.getElementById('start');
+  clock = document.getElementById ('clock');
+  setTime = document.getElementById('setTime');
   setInterval(function setTime() { 
     startTime = new Date();
-    countdown.innerHTML = startTime.toLocaleTimeString();
+    clock.innerHTML = "Clock:" + " " + startTime.toLocaleTimeString();
   }, 1000);
 }
 
-function Timer() {
+function Start() {
   plantGraphic.src = "images/altpot.gif";
   pause.disabled = false;
   pause.style.visibility = "visible";
@@ -29,6 +35,17 @@ function Timer() {
   comment.innerHTML = 'Growing...';
   start.disabled = true;
   start.style.visibility = "hidden";
+  setTime.disabled = true;
+  setTime.style.visbility = "hidden";
+
+  pickedTime = setTime.value;
+  timerMinutes = Number(pickedTime.substring(3));
+  timerHours = Number(pickedTime.substring(0,2));
+  startDate = new Date();
+  endDate = new Date();
+  endDate.setHours(startDate.getHours() + timerHours);
+  endDate.setMinutes(startDate.getMinutes() + timerMinutes);
+  countdown.innerHTML = endDate.toLocaleString();
 }
 
 

@@ -41,8 +41,9 @@ h1 {
     float:right;
 }
 
-#countdown {
+#clock {
     font-family: Helvetica, sans-serif;
-    font-size: 40px;
+    font-size: 25px;
     font-weight: bold;
+
 }
