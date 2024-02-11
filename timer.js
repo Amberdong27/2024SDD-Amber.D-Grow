@@ -38,25 +38,40 @@ function Start() {
     if (startDate.toLocaleTimeString() >= endDate.toLocaleTimeString()||pickedTime.value == "00:00") {
       countdown.innerHTML = "Write a valid time";
     } else {
-      countdown.innerHTML = "Study End Time: " + endDate.toLocaleTimeString();
+    //  countdown.innerHTML = "Study End Time: " + endDate.toLocaleTimeString();
       plantGraphic.src = "images/altpot.gif";
       start.disabled = true;
       start.style.visibility = "hidden";
       setTime.disabled = true;
       setTime.style.visibility = "hidden";
-      extra.innerHTML = "";
+      extra.innerHTML = "Study End Time: " + endDate.toLocaleTimeString();
       pause.disabled = false;
       pause.style.visibility = "visible";
       end.disabled = false;
       end.style.visibility = "visible";
       unpause.style.visibility = "visible";
-      unpause.disabled = false;
       comment.innerHTML = 'Growing...';
+      Timer();
     }
   }
 
 
+function Timer() {
+  var x = setInterval(function() {
+    startDate = new Date();
+    var difference = endDate - startDate;
 
+    var hours = Math.floor((difference % (1000*60*60*60*24))/(1000*60*60));
+    var minutes = Math.floor((difference % (1000*60*60))/(1000*60));
+    var seconds = Math.floor((difference % (1000*60))/1000);
+    countdown.innerHTML = "Hours:" + hours + " " + "Minutes:" + minutes + " " +"Seconds: " + seconds;
+
+ if (seconds <0) {
+      clearInterval(x);
+      success();
+    }
+  },1000)
+}
 
 function success() {
   plantGraphic.src = "images/Plant.gif";
@@ -72,12 +87,14 @@ function success() {
   start.style.visibility = "hidden";
   again.disabled = false;
   again.style.visibility = "visible";
+  countdown.innerHTML = "";
 }
 
 function Pause() {
   plantGraphic.src = "images/watering.gif";
   comment.innerHTML = "5 minutes Break";
   pause.disabled = true;
+  unpause.disabled = false;
   extra.innerHTML = "Timer Paused";
   window.setTimeout(End, 60000);
 }
@@ -99,28 +116,3 @@ function End() {
 function Again() {
   window.location.reload();
 }
-
-
-
-/*function R() {
-  thirtyMin = 60 * 1,
-  startTimer(thirtyMin);
-};
-
-function startTimer(duration) {
-  var timer = duration, minutes, seconds;
-  o = setInterval(function R() {
-    minutes = parseInt(timer / 60, 10);
-    seconds = parseInt(timer % 60, 10);
-
-    minutes = minutes < 10 ? "0" + minutes : minutes;
-    seconds = seconds < 10 ? "0" + seconds : seconds;
-
-    document.getElementById('countdown').innerHTML = minutes + ":" + seconds;
-
-    if (--timer < 0){
-      timer = duration;
-      success();
-    }
-  }, 1000);
-} */
