@@ -13,8 +13,8 @@ var minutes;
 var seconds;
 var x;
 
-window.onload = function() {
-  checknotify();
+window.onload = function() { 
+  checknotify(); //check users notification settings 
   comment = document.getElementById ('text');
   extra = document.getElementById ('extra');
   plantGraphic = document.getElementById ('plantGraphic');
@@ -25,7 +25,7 @@ window.onload = function() {
   start = document.getElementById('start');
   clock = document.getElementById ('clock');
   setTime = document.getElementById('setTime');
-  setInterval(function() { 
+  setInterval(function() { // for system clock 
     startTime = new Date();
     clock.innerHTML = "Clock:" + " " + startTime.toLocaleTimeString();
   }, 1000);
@@ -33,7 +33,7 @@ window.onload = function() {
   extra.innerHTML = "Please use : inbetween hours and minutes for correct results";
 }
 
-function Start() {
+function Start() { //when the start button is pressed + getting the inputted time 
   pickedTime = setTime.value;
   timerMinutes = Number(pickedTime.substring(3));
   timerHours = Number(pickedTime.substring(0,2));
@@ -62,7 +62,7 @@ function Start() {
   }
 
 
-function Timer() {
+function Timer() { // general countdown timer function and calculating the difference 
    x = setInterval(function() {
     startDate = new Date();
     difference = endDate - startDate;
@@ -80,16 +80,16 @@ function Timer() {
       countdown.innerHTML = hours + ":" + minutes + ":"+ seconds;
     }
 
- if (seconds < 0) {
+ if (seconds < 0) { // when the timer ends naturally
       clearInterval(x);
       success();
-    } else if (timeEnded == true) {
+    } else if (timeEnded == true) { // when user ends the timer with end button 
       clearInterval(x);
     }
   },1000)
 }
 
-function Pause() {
+function Pause() { // when user use the pause button 
   plantGraphic.src = "images/watering.gif";
   comment.innerHTML = "5 minutes Break";
   pause.disabled = true;
@@ -97,9 +97,10 @@ function Pause() {
   if (Notification.permission === "granted") {
     const notification = new Notification ("Timer has been paused");
 }
-  pauseduration = setTimeout (End, 300000);
+  pauseduration = setTimeout (End, 330000); //not exactly 5 mins room for person to get back 
   clearInterval(x);
 
+  // calculating when break time would end 
   startDate = undefined;
   endDate = undefined;
   startDate = new Date();
@@ -108,15 +109,16 @@ function Pause() {
   extra.innerHTML = "Break Time End: " + endDate.toLocaleTimeString();
 }
 
-function Unpaused() {
+function Unpaused() { // when unpaused button  is used 
   plantGraphic.src = "images/altpot.gif";
   pause.disabled = false;
   unpause.disabled = true;
   if (Notification.permission === "granted") {
     const notification = new Notification ("Timer has restarted");
 }
-  clearTimeout(pauseduration);
+  clearTimeout(pauseduration); // clearing out the time out 
 
+  // recalculating end time using left over time difference from when the pause button is hit 
   startDate = undefined;
   endDate = undefined;
   startDate = new Date();
@@ -129,7 +131,7 @@ function Unpaused() {
 }
 
 
-function success() {
+function success() { // when timer ends when countdown runs out 
   plantGraphic.src = "images/Plant.gif";
   comment.innerHTML = "The plant is fully grown!";
   extra.innerHTML ="Take a Break!";
@@ -142,7 +144,7 @@ function success() {
 }
 
 
-function End() {
+function End() { //when user use the end button or is timeout from the break
   plantGraphic.src = "images/deadplant.png";
   comment.innerHTML = "The plant died...";
   extra.innerHTML ="Take a Break and try again!"
@@ -153,7 +155,7 @@ function End() {
   clearTimeout(pauseduration);
 }
 
-function finishUI () {
+function finishUI () { //buttons changes 
   pause.disabled = true;
   pause.style.visibility = "hidden";
   end.disabled = true;
@@ -165,14 +167,7 @@ function finishUI () {
   countdown.innerHTML = "";
 }
 
-function newTime() {
-  startDate = undefined;
-  endDate = undefined;
-  startDate = new Date();
-  endDate = new Date ();
-}
-
-function checknotify() {
+function checknotify() { //checking notification 
   if (!("Notification" in window)) {
     alert("This browser does not support notification");
   } else if (Notification.permission !== "denied") {
@@ -180,6 +175,6 @@ function checknotify() {
   }
 }
 
-function Again() {
+function Again() { //reloading new timer 
   window.location.reload();
 }
