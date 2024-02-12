@@ -1,8 +1,8 @@
 ## Product Backlog
-- ~~ Landing page with three buttons ~~ (Updated)
-- ~~ Create and add a Logo ~~
-- ~~ Creating 3 blank pages ~~ (Added)
-- ~~ Connect the buttons to their respective pages ~~
+- ~~Landing page with three buttons~~ (Updated)
+- ~~Create and add a Logo~~
+- ~~Creating 3 blank pages~~ (Added)
+- ~~Connect the buttons to their respective pages~~
 - Build base timer page with buttons
 - Add another elements to timer page (Added)
 - Build base planner page with buttons (Added) 
