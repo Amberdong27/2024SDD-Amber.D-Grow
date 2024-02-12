@@ -7,9 +7,9 @@
 - ~~ Add another elements to timer page (Added)~~
 - Build base planner page with buttons (Added) 
 - Add another elements to planner page (Added)
-- Build achievement page with buttons (Added)
-- Add another elements to achievement page (Added)
-- Add relavent APIs (Added)
+- Build tips page (Added)
+- Add another elements to tips page (Added)
+- Add relavent APIs (Added) 
 - Adding changing graphics 
 - Create database for achievements
 - JS to construct front end JSON file
