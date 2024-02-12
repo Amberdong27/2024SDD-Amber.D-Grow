@@ -6,6 +6,12 @@ var endDate;
 var timerMinutes;
 var timerHours;
 var timerSeconds;
+var timeEnded = false;
+var difference;
+var hours;
+var minutes;
+var seconds;
+var x;
 
 window.onload = function() {
   comment = document.getElementById ('text');
@@ -18,7 +24,7 @@ window.onload = function() {
   start = document.getElementById('start');
   clock = document.getElementById ('clock');
   setTime = document.getElementById('setTime');
-  setInterval(function setTime() { 
+  setInterval(function() { 
     startTime = new Date();
     clock.innerHTML = "Clock:" + " " + startTime.toLocaleTimeString();
   }, 1000);
@@ -38,7 +44,6 @@ function Start() {
     if (startDate.toLocaleTimeString() >= endDate.toLocaleTimeString()||pickedTime.value == "00:00") {
       countdown.innerHTML = "Write a valid time";
     } else {
-    //  countdown.innerHTML = "Study End Time: " + endDate.toLocaleTimeString();
       plantGraphic.src = "images/altpot.gif";
       start.disabled = true;
       start.style.visibility = "hidden";
@@ -57,37 +62,28 @@ function Start() {
 
 
 function Timer() {
-  var x = setInterval(function() {
+   x = setInterval(function() {
     startDate = new Date();
-    var difference = endDate - startDate;
+    difference = endDate - startDate;
+    hours = Math.floor((difference % (1000*60*60*60*24))/(1000*60*60));
+    minutes = Math.floor((difference % (1000*60*60))/(1000*60));
+    seconds = Math.floor((difference % (1000*60))/1000);
 
-    var hours = Math.floor((difference % (1000*60*60*60*24))/(1000*60*60));
-    var minutes = Math.floor((difference % (1000*60*60))/(1000*60));
-    var seconds = Math.floor((difference % (1000*60))/1000);
-    countdown.innerHTML = "Hours:" + hours + " " + "Minutes:" + minutes + " " +"Seconds: " + seconds;
+    if (hours == 0 && minutes == 0) {
+      countdown.innerHTML = "00" + ":" + "00" + ":"+ seconds;
+    } else if (minutes == 0) {
+      countdown.innerHTML = hours + ":" + "00" + ":"+ seconds;
+    } else if (hours == 0) {
+      countdown.innerHTML = "00" + ":" + minutes + ":"+ seconds;
+    } else {
+      countdown.innerHTML = hours + ":" + minutes + ":"+ seconds;
+    }
 
- if (seconds <0) {
+ if (seconds < 0 || timeEnded == true) {
       clearInterval(x);
       success();
     }
   },1000)
-}
-
-function success() {
-  plantGraphic.src = "images/Plant.gif";
-  comment.innerHTML = "The plant is fully grown!";
-  extra.innerHTML ="Take a Break!";
-  pause.disabled = true;
-  pause.style.visibility = "hidden";
-  end.disabled = true;
-  end.style.visibility = "hidden";
-  unpause.disabled = true;
-  unpause.style.visibility = "hidden";
-  start.disabled = true;
-  start.style.visibility = "hidden";
-  again.disabled = false;
-  again.style.visibility = "visible";
-  countdown.innerHTML = "";
 }
 
 function Pause() {
@@ -95,14 +91,54 @@ function Pause() {
   comment.innerHTML = "5 minutes Break";
   pause.disabled = true;
   unpause.disabled = false;
-  extra.innerHTML = "Timer Paused";
-  window.setTimeout(End, 60000);
+  pauseduration = setTimeout (End, 300000);
+  clearInterval(x);
+
+  startDate = undefined;
+  endDate = undefined;
+  startDate = new Date();
+  endDate = new Date ();
+  endDate.setMinutes(startDate.getMinutes() + 5);
+  extra.innerHTML = "Break Time End: " + endDate.toLocaleTimeString();
 }
+
+function Unpaused() {
+  plantGraphic.src = "images/altpot.gif";
+  pause.disabled = false;
+  unpause.disabled = true;
+  clearTimeout(pauseduration);
+
+  startDate = undefined;
+  endDate = undefined;
+  startDate = new Date();
+  endDate = new Date ();
+  endDate.setHours(startDate.getHours() + hours);
+  endDate.setMinutes(startDate.getMinutes() + minutes);
+  endDate.setSeconds(startDate.getSeconds() + seconds);
+  extra.innerHTML = "Study End Time: " + endDate.toLocaleTimeString();
+  Timer();
+}
+
+
+function success() {
+  plantGraphic.src = "images/Plant.gif";
+  comment.innerHTML = "The plant is fully grown!";
+  extra.innerHTML ="Take a Break!";
+  finishUI();
+}
+
 function End() {
   plantGraphic.src = "images/deadplant.png";
   comment.innerHTML = "The plant died...";
-  extra.innerHTML ="Take a Break and Restart!"
+  extra.innerHTML ="Take a Break and try again!"
   extra.style.fontWeight = "600";
+  finishUI();
+  timeEnded = true;
+  clearInterval(x);
+  clearTimeout(pauseduration);
+}
+
+function finishUI () {
   pause.disabled = true;
   pause.style.visibility = "hidden";
   end.disabled = true;
@@ -111,6 +147,14 @@ function End() {
   unpause.style.visibility = "hidden";
   again.disabled = false;
   again.style.visibility = "visible";
+  countdown.innerHTML = "";
+}
+
+function newTime() {
+  startDate = undefined;
+  endDate = undefined;
+  startDate = new Date();
+  endDate = new Date ();
 }
 
 function Again() {
