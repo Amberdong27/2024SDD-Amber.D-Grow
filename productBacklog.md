@@ -10,10 +10,10 @@
 - Build tips page (Added)
 - Add another elements to tips page (Added)
 - Add relavent APIs (Added) 
-- Adding changing graphics 
-- Create database for achievements
+- ~~Adding changing graphics~~ 
+- Create database for study tips
 - JS to construct front end JSON file
-- JS to construct front end data for achievements
+- JS to construct front end data for study times
 - Create study planner page
 - Create input box for study planner 
 - Store study planner in local memory 
