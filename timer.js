@@ -114,7 +114,7 @@ function Unpaused() { // when unpaused button  is used
   pause.disabled = false;
   unpause.disabled = true;
   if (Notification.permission === "granted") {
-    const notification = new Notification ("Timer has restarted");
+    const notification = new Notification ("Timer has resumed");
 }
   clearTimeout(pauseduration); // clearing out the time out 
 
