@@ -3,7 +3,7 @@
 ## Sprint backlog list of achievables (annotate changes made during sprint, including data required)
 - ~~Trying to make a function timer~~
 - ~~Working Unpause and Pause buttons~~
-- Adding Notification API (if possible)
+- ~~Adding Notification API~~ (if possible)
 - Adding a warning sound before timer ends (if possible)
 
 Notes: 

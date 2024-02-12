@@ -14,6 +14,7 @@ var seconds;
 var x;
 
 window.onload = function() {
+  checknotify();
   comment = document.getElementById ('text');
   extra = document.getElementById ('extra');
   plantGraphic = document.getElementById ('plantGraphic');
@@ -125,7 +126,11 @@ function success() {
   comment.innerHTML = "The plant is fully grown!";
   extra.innerHTML ="Take a Break!";
   finishUI();
+  if (Notification.permission === "granted") {
+    const notification = new Notification ("Timer has ended! Take a break!");
 }
+}
+
 
 function End() {
   plantGraphic.src = "images/deadplant.png";
@@ -155,6 +160,14 @@ function newTime() {
   endDate = undefined;
   startDate = new Date();
   endDate = new Date ();
+}
+
+function checknotify() {
+  if (!("Notification" in window)) {
+    alert("This browser does not support notification");
+  } else if (Notification.permission !== "denied") {
+    Notification.requestPermission();
+  }
 }
 
 function Again() {
