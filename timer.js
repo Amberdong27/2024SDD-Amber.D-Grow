@@ -80,9 +80,11 @@ function Timer() {
       countdown.innerHTML = hours + ":" + minutes + ":"+ seconds;
     }
 
- if (seconds < 0 || timeEnded == true) {
+ if (seconds < 0) {
       clearInterval(x);
       success();
+    } else if (timeEnded == true) {
+      clearInterval(x);
     }
   },1000)
 }
@@ -110,6 +112,9 @@ function Unpaused() {
   plantGraphic.src = "images/altpot.gif";
   pause.disabled = false;
   unpause.disabled = true;
+  if (Notification.permission === "granted") {
+    const notification = new Notification ("Timer has restarted");
+}
   clearTimeout(pauseduration);
 
   startDate = undefined;
@@ -128,6 +133,8 @@ function success() {
   plantGraphic.src = "images/Plant.gif";
   comment.innerHTML = "The plant is fully grown!";
   extra.innerHTML ="Take a Break!";
+  var alarm = new Audio("alarm.mp3");
+  alarm.play();
   finishUI();
   if (Notification.permission === "granted") {
     const notification = new Notification ("Timer has ended! Take a break!");
