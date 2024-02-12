@@ -92,6 +92,9 @@ function Pause() {
   comment.innerHTML = "5 minutes Break";
   pause.disabled = true;
   unpause.disabled = false;
+  if (Notification.permission === "granted") {
+    const notification = new Notification ("Timer has been paused");
+}
   pauseduration = setTimeout (End, 300000);
   clearInterval(x);
 
