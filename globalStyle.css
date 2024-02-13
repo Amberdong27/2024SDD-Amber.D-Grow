@@ -9,6 +9,15 @@ body {
     font-weight: bold;
 }
 
+.form-select {
+    margin: auto;
+    margin-top: 30px;
+    font-family: Helvetica, sans-serif;
+    width: 50%;
+    display: flex;
+    justify-content: center; 
+
+}
 h1 {
     font-family: Helvetica, sans-serif;
     font-size: 40px;
