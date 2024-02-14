@@ -1,7 +1,8 @@
 # Agile Artifacts 
 
 ## Sprint backlog list of achievables (annotate changes made during sprint, including data required)
-- Build tips page 
+- Building tips page 
+- Adding a drop down menu for user to access database
 - Add another elements to tips page
 
 
@@ -11,7 +12,7 @@
 - Working SQL Database (maybe move to next sprint if nesscary)
 - Create database for study tips
 - JS to construct front end JSON file
-- JS to construct front end data for study times
+- JS to construct front end data for study tips
 
 
 ## Sprint Review 
