@@ -1,19 +1,16 @@
 ## Product Backlog
-- ~~Landing page with three buttons~~ (Updated)
+- ~~Landing page with three buttons~~ 
 - ~~Create and add a Logo~~
-- ~~Creating 3 blank pages~~ (Added)
+- ~~Creating 3 blank pages~~
 - ~~Connect the buttons to their respective pages~~
 - ~~Build base timer page with buttons~~
-- ~~Add another elements to timer page (Added)~~
+- ~~Add another elements to timer page~~
 - Build base planner page with buttons (Added) 
 - Add another elements to planner page (Added)
-- Build tips page (Added)
-- Add another elements to tips page (Added)
-- Add relavent APIs (Added) 
-- Adding changing graphics 
-- Create database for achievements
-- JS to construct front end JSON file
-- JS to construct front end data for achievements
+- ~~Build tips page~~ 
+- ~~Add another elements to tips page~~
+- Add relavent APIs
+- ~~Adding changing graphics~~ 
 - Create study planner page
 - Create input box for study planner 
 - Store study planner in local memory 

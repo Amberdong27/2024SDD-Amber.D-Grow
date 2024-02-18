@@ -1,23 +1,27 @@
 # Agile Artifacts 
 
 ## Sprint backlog list of achievables (annotate changes made during sprint, including data required)
-- ~~Trying to make a function timer~~
-- ~~Working Unpause and Pause buttons~~
-- ~~Adding Notification API~~ (if possible)
-- ~~Adding a warning sound before timer ends~~ (if possible)
+- Building tips page 
+- Adding a drop down menu for user to access database
+- Add another elements to tips page (such as a dropdown menu and buttons )
+- Built the base of the SQL database 
+- Organised files into the SQL database
 
-Notes: 
-- Shared UAT doc with Timer Page
 
 ## Increment (what must be achieved by the end of the sprint)
-- Building the timer function 
+- ~~Build tips page~~
+- ~~Add another elements to tips page~~
+- ~~Working SQL Database~~ (Base of the database has been built)
+- Create database for study tips (move to next sprint)
+- JS to construct front end JSON file (move to next sprint)
+- JS to construct front end data for study tips  (move to next sprint)
 
 
 ## Sprint Review 
 ### What challenges did you have
-The challenges I faced during this sprint was mainly trying to get the timer to be displayed correctly and can count down properly after it has been paused. Another challenge was getting the time to calculate correct as during the sprint I ran into one error after another 
+
+
 ### What did you do well
- I think I did well with updating the UI to suit the timer better as well as building the timer and the pause and unpause button functions.
+
 
 ### What will you do differently next time
-What I would do differently next time would be to perhaps simplify and condense the code more. 

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Timer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/globalStyle.css">
+    <script src= "js/timer.js"></script>
+  </head>
+  <body>
+    <div class="container text-center">
+        <div class="row">
+          </div>
+          <div class="col-13" >
+            <h1>Timer</h1> <span id="clock"></span>
+          </div>
+          <h4 id="text">Type in a time and press start</h4>
+          <span id="extra"></span>
+          <div class="col-13">
+            <img id="plantGraphic" src="images\pot.png" class="img-fluid" width="200" height="100">
+          </div>
+          <div id="countdown">
+          </div>
+          <div class="col">
+            <input type="text" id="setTime" maxlength = "5" value="00:00"> 
+            <button id="start" type="button" class="btn" onclick="Start();">Start</button>
+          </div>
+          <div class="col">
+            <button id="pause" type="button" class="btn" onclick="Pause()" disabled>Pause</button>
+            <button id="unpause" type = "button" class="btn" onclick="Unpaused()" disabled>Unpause</button>
+            <button id="end" type = "button" class="btn" onclick="End()" disabled>End</button>
+          </div>
+          <div class="col-13">
+            <button id="again" type = "button" class="btn" onclick="Again()" disabled>Again</button>
+            <a href= 'index.html'>
+              <button id="return" type="button" class="btn">RETURN</button>
+            </a>
+            <button id="help" class="btn">HELP</button>
+            </div>
+    </div>
+    <audio> 
+    <source src = "alarm.mp3"> 
+    </audio>
+      </div> 
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
