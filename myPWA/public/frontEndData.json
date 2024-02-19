@@ -1,0 +1,17 @@
+[
+    {
+        "tipID": 1,
+        "name": "Taking Breaks",
+        "details": "It is important to take short breaks during a study session as it allows the brain to retain information better. While taking breaks focus on doing something active and different."
+    },
+    {
+        "tipID": 2,
+        "name": "Concentration",
+        "details": "To improve concentration use should: minimise distractions, write a to do list and schedule specific study times to help"
+    },
+    {
+        "tipID": 3,
+        "name": "Organising Workload",
+        "details": "To help with studying you should organise your workload accordingly to what must be done first to what is least important. Writing a list of when things are need to be done and when it's due is also a good way in organising workload"
+    }
+]
