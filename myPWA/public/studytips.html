@@ -15,8 +15,14 @@
           <h1> Study Tips </h1>
         </div>
         <div class= "container">
-          </div>
+          <select id="selector" class="form-select" aria-label="Default select example" onchange="selection()">
+            <option selected value="0"> Select a study tip</option>
+            <option value="1">Taking Breaks</option>
+            <option value="2">Concentration</option>
+            <option value="3">Organising Workload</option>
+            </select>
         </div>
+        <div id="advice"></div>
         <div class="col-13">
           <button id="again" type = "button" class="btn" onclick="Again()" disabled>Again</button>
           <div class="container"></div>
