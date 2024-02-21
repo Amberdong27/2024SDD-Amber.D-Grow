@@ -24,15 +24,15 @@
           </div>
           <div class="col">
             <input type="text" id="setTime" maxlength = "5" value="00:00"> 
-            <button id="start" type="button" class="btn" onclick="Start();">Start</button>
+            <button id="start" type="button" class="btn" onclick="startTimer();">Start</button>
           </div>
           <div class="col">
-            <button id="pause" type="button" class="btn" onclick="Pause()" disabled>Pause</button>
-            <button id="unpause" type = "button" class="btn" onclick="Unpaused()" disabled>Unpause</button>
-            <button id="end" type = "button" class="btn" onclick="End()" disabled>End</button>
+            <button id="pause" type="button" class="btn" onclick="stopTimer()" disabled>Pause</button>
+            <button id="unpause" type = "button" class="btn" onclick="resumeTimer()" disabled>Unpause</button>
+            <button id="end" type = "button" class="btn" onclick="endTimer()" disabled>End</button>
           </div>
           <div class="col-13">
-            <button id="again" type = "button" class="btn" onclick="Again()" disabled>Again</button>
+            <button id="again" type = "button" class="btn" onclick="restartTimer()" disabled>Again</button>
             <a href= 'index.html'>
               <button id="return" type="button" class="btn">RETURN</button>
             </a>

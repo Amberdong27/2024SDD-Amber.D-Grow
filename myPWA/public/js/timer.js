@@ -25,6 +25,7 @@ window.onload = function() {
   start = document.getElementById('start');
   clock = document.getElementById ('clock');
   setTime = document.getElementById('setTime');
+  again = document.getElementById('again');
   setInterval(function() { // for system clock 
     startTime = new Date();
     clock.innerHTML = "Clock:" + " " + startTime.toLocaleTimeString();
@@ -33,7 +34,7 @@ window.onload = function() {
   extra.innerHTML = "Please use : inbetween hours and minutes for correct results";
 }
 
-function Start() { //when the start button is pressed + getting the inputted time 
+function startTimer() { //when the start button is pressed + getting the inputted time 
   pickedTime = setTime.value;
   timerMinutes = Number(pickedTime.substring(3));
   timerHours = Number(pickedTime.substring(0,2));
@@ -89,7 +90,7 @@ function Timer() { // general countdown timer function and calculating the diffe
   },1000)
 }
 
-function Pause() { // when user use the pause button 
+function stopTimer() { // when user use the pause button 
   plantGraphic.src = "images/watering.gif";
   comment.innerHTML = "5 minutes Break";
   pause.disabled = true;
@@ -109,7 +110,7 @@ function Pause() { // when user use the pause button
   extra.innerHTML = "Break Time End: " + endDate.toLocaleTimeString();
 }
 
-function Unpaused() { // when unpaused button  is used 
+function resumeTimer() { // when unpaused button  is used 
   plantGraphic.src = "images/altpot.gif";
   pause.disabled = false;
   unpause.disabled = true;
@@ -144,7 +145,7 @@ function success() { // when timer ends when countdown runs out
 }
 
 
-function End() { //when user use the end button or is timeout from the break
+function endTimer() { //when user use the end button or is timeout from the break
   plantGraphic.src = "images/deadplant.png";
   comment.innerHTML = "The plant died...";
   extra.innerHTML ="Take a Break and try again!"
@@ -175,6 +176,6 @@ function checknotify() { //checking notification
   }
 }
 
-function Again() { //reloading new timer 
+function restartTimer() { //reloading new timer 
   window.location.reload();
 }
