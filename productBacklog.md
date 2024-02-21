@@ -5,12 +5,14 @@
 - ~~Connect the buttons to their respective pages~~
 - ~~Build base timer page with buttons~~
 - ~~Add another elements to timer page~~
-- Build base planner page with buttons (Added) 
-- Add another elements to planner page (Added)
 - ~~Build tips page~~ 
 - ~~Add another elements to tips page~~
-- Add relavent APIs
 - ~~Adding changing graphics~~ 
+- ~~Create database for study tips~~
+- ~~JS to construct front end JSON file~~
 - Create study planner page
 - Create input box for study planner 
 - Store study planner in local memory 
+- Add relavent APIs
+- Build base planner page with buttons 
+- Add another elements to planner page

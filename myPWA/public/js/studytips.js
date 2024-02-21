@@ -1,6 +1,7 @@
 
 let result = ""; 
 
+// pulling database data for frontend json
 fetch('./frontEndData.json') 
   .then(function (response) { 
     return response.json(); 
@@ -13,6 +14,7 @@ fetch('./frontEndData.json')
     console.log('error: ' + err); 
   }); 
 
+  // Creating the study tips cards 
   function appendData(data) { 
     data.forEach(({tipID, name, details} = rows) => { 
       result += ` 
@@ -25,11 +27,13 @@ fetch('./frontEndData.json')
     document.getElementById("advice").innerHTML = result; 
   } 
 
+  //Displaying each card accordingly 
   function selection() {
     var value = document.getElementById("selector").value;
     var option1 = document.getElementById("1");
     var option2 = document.getElementById("2");
     var option3 = document.getElementById("3");
+   
     if (value == "1") {
       option1.style.visibility = "visible";
       option2.style.visibility = "hidden";
