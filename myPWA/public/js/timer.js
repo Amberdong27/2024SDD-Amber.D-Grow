@@ -101,28 +101,15 @@ function stopTimer() { // when user use the pause button
   pause.disabled = true;
   unpause.disabled = false;
   breakTime();
- /* if (Notification.permission === "granted") {
-    const notification = new Notification ("Timer has been paused");
-} */
 
 navigator.serviceWorker.register("serviceWorker.js");
-
-const options = { tag: "user_alerts" };
-
-navigator.serviceWorker.ready.then((registration) => {
-  registration.getNotifications(options).then((notifications) => {
-    registration.showNotification("Timer has been paused");
-  });
-});
-
-/*navigator.serviceWorker.register("serviceWorker.js");
 Notification.requestPermission().then((result) => {
   if (result === "granted") {
     navigator.serviceWorker.ready.then((registration) => {
       registration.showNotification("Timer has been paused");
     });
   }
-}); */
+});
   pauseduration = setTimeout (End, 330000); //not exactly 5 mins room for person to get back 
 }
 
@@ -141,9 +128,14 @@ function resumeTimer() { // when unpaused button  is used
   pause.disabled = false;
   unpause.disabled = true;
   timeLeft();
-  if (Notification.permission === "granted") {
-    const notification = new Notification ("Timer has resumed");
-}
+navigator.serviceWorker.register("serviceWorker.js");
+Notification.requestPermission().then((result) => {
+  if (result === "granted") {
+    navigator.serviceWorker.ready.then((registration) => {
+      registration.showNotification("Timer has resumed");
+    });
+  }
+});
   clearTimeout(pauseduration); // clearing out the time out 
 
   // recalculating end time using left over time difference from when the pause button is hit 
@@ -168,9 +160,15 @@ function success() { // when timer ends when countdown runs out
   var alarm = new Audio("alarm.mp3");
   alarm.play();
   finishUI();
-  if (Notification.permission === "granted") {
-    const notification = new Notification ("Timer has ended! Take a break!");
-}
+navigator.serviceWorker.register("serviceWorker.js");
+Notification.requestPermission().then((result) => {
+  if (result === "granted") {
+    navigator.serviceWorker.ready.then((registration) => {
+      registration.showNotification("Timer has ended! Take a break!");
+    });
+  }
+});
+
 }
 
 
