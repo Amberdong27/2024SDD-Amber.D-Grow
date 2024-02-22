@@ -32,11 +32,11 @@ window.onload = function() {
   }, 1000);
 
   extra.innerHTML = "Please use : inbetween hours and minutes for correct results";
-  start.addEventListener("touchstart", startTimer());
-  end.addEventListener("touchstart", endTimer());
-  again.addEventListener("touchstart", restartTimer());
-  pause.addEventListener("touchstart", stopTimer());
-  unpause.addEventListener("touchstart", resumeTimer());
+  /*start.addEventListener("ontouchstart", startTimer());
+  end.addEventListener("ontouchstart", endTimer()); 
+  again.addEventListener("ontouchstart", restartTimer()); 
+  pause.addEventListener("ontouchstart", stopTimer());
+  unpause.addEventListener("ontouchstart", resumeTimer()); */
 }
 
 function startTimer() { //when the start button is pressed + getting the inputted time 
@@ -100,31 +100,37 @@ function stopTimer() { // when user use the pause button
   comment.innerHTML = "5 minutes Break";
   pause.disabled = true;
   unpause.disabled = false;
+  breakTime();
   if (Notification.permission === "granted") {
     const notification = new Notification ("Timer has been paused");
 }
   pauseduration = setTimeout (End, 330000); //not exactly 5 mins room for person to get back 
-  clearInterval(x);
+}
 
-  // calculating when break time would end 
+function breakTime() {
   startDate = undefined;
   endDate = undefined;
   startDate = new Date();
   endDate = new Date ();
   endDate.setMinutes(startDate.getMinutes() + 5);
   extra.innerHTML = "Break Time End: " + endDate.toLocaleTimeString();
+  clearInterval(x);
 }
 
 function resumeTimer() { // when unpaused button  is used 
   plantGraphic.src = "images/altpot.gif";
   pause.disabled = false;
   unpause.disabled = true;
+  timeLeft();
   if (Notification.permission === "granted") {
     const notification = new Notification ("Timer has resumed");
 }
   clearTimeout(pauseduration); // clearing out the time out 
 
   // recalculating end time using left over time difference from when the pause button is hit 
+}
+
+function timeLeft() {
   startDate = undefined;
   endDate = undefined;
   startDate = new Date();
@@ -135,7 +141,6 @@ function resumeTimer() { // when unpaused button  is used
   extra.innerHTML = "Study End Time: " + endDate.toLocaleTimeString();
   Timer();
 }
-
 
 function success() { // when timer ends when countdown runs out 
   plantGraphic.src = "images/Plant.gif";
