@@ -32,6 +32,9 @@ window.onload = function() {
   }, 1000);
 
   extra.innerHTML = "Please use : inbetween hours and minutes for correct results";
+  start.addEventListener("touchstart", startTimer());
+  end.addEventListener("touchstart", endTimer());
+  again.addEventListener("touchstart", restartTimer());
   pause.addEventListener("touchstart", stopTimer());
   unpause.addEventListener("touchstart", resumeTimer());
 }
