@@ -87,6 +87,20 @@ h2 {
     font-size: 20px;
 }
 
+#date {
+    font-family: Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: right;
+}
+
 #extra {
     font-size: 23px;
+}
+
+#add{
+    margin-top: 0px;
+    margin-left: 5px;
+    padding: 4px 32px;
+    font-weight: bold;
 }
