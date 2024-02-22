@@ -32,11 +32,6 @@ window.onload = function() {
   }, 1000);
 
   extra.innerHTML = "Please use : inbetween hours and minutes for correct results";
-  /*start.addEventListener("ontouchstart", startTimer());
-  end.addEventListener("ontouchstart", endTimer()); 
-  again.addEventListener("ontouchstart", restartTimer()); 
-  pause.addEventListener("ontouchstart", stopTimer());
-  unpause.addEventListener("ontouchstart", resumeTimer()); */
 }
 
 function startTimer() { //when the start button is pressed + getting the inputted time 
@@ -113,7 +108,7 @@ Notification.requestPermission().then((result) => {
   pauseduration = setTimeout (End, 330000); //not exactly 5 mins room for person to get back 
 }
 
-function breakTime() {
+function breakTime() { //cal break time
   startDate = undefined;
   endDate = undefined;
   startDate = new Date();
@@ -137,11 +132,9 @@ Notification.requestPermission().then((result) => {
   }
 });
   clearTimeout(pauseduration); // clearing out the time out 
-
-  // recalculating end time using left over time difference from when the pause button is hit 
 }
 
-function timeLeft() {
+function timeLeft() { // recalculating end time using left over time difference from when the pause button is hit 
   startDate = undefined;
   endDate = undefined;
   startDate = new Date();
@@ -168,7 +161,6 @@ Notification.requestPermission().then((result) => {
     });
   }
 });
-
 }
 
 
