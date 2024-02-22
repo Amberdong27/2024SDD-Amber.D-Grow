@@ -104,6 +104,14 @@ function stopTimer() { // when user use the pause button
   if (Notification.permission === "granted") {
     const notification = new Notification ("Timer has been paused");
 }
+
+Notification.requestPermission().then((result) => {
+  if (result === "granted") {
+    navigator.serviceWorker.ready.then((registration) => {
+      registration.showNotification("Timer has been paused");
+    });
+  }
+});
   pauseduration = setTimeout (End, 330000); //not exactly 5 mins room for person to get back 
 }
 
