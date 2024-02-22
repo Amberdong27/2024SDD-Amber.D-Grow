@@ -106,13 +106,23 @@ function stopTimer() { // when user use the pause button
 } */
 
 navigator.serviceWorker.register("serviceWorker.js");
+
+const options = { tag: "user_alerts" };
+
+navigator.serviceWorker.ready.then((registration) => {
+  registration.getNotifications(options).then((notifications) => {
+    registration.showNotification("Timer has been paused");
+  });
+});
+
+/*navigator.serviceWorker.register("serviceWorker.js");
 Notification.requestPermission().then((result) => {
   if (result === "granted") {
     navigator.serviceWorker.ready.then((registration) => {
       registration.showNotification("Timer has been paused");
     });
   }
-});
+}); */
   pauseduration = setTimeout (End, 330000); //not exactly 5 mins room for person to get back 
 }
 
