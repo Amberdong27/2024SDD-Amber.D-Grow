@@ -32,6 +32,8 @@ window.onload = function() {
   }, 1000);
 
   extra.innerHTML = "Please use : inbetween hours and minutes for correct results";
+  pause.addEventListener("touchstart", stopTimer());
+  unpause.addEventListener("touchstart", resumeTimer());
 }
 
 function startTimer() { //when the start button is pressed + getting the inputted time 
