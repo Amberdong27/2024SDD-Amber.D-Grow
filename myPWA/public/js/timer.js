@@ -101,10 +101,11 @@ function stopTimer() { // when user use the pause button
   pause.disabled = true;
   unpause.disabled = false;
   breakTime();
-  if (Notification.permission === "granted") {
+ /* if (Notification.permission === "granted") {
     const notification = new Notification ("Timer has been paused");
-}
+} */
 
+navigator.serviceWorker.register("serviceWorker.js");
 Notification.requestPermission().then((result) => {
   if (result === "granted") {
     navigator.serviceWorker.ready.then((registration) => {
