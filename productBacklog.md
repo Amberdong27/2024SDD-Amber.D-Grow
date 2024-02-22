@@ -12,7 +12,8 @@
 - ~~JS to construct front end JSON file~~
 - Create study planner page
 - Create input box for study planner 
-- Store study planner in local memory 
-- Add relavent APIs
 - Build base planner page with buttons 
 - Add another elements to planner page
+- Store study plans in local memory 
+- Adding study plans 
+- Add relavent APIs
