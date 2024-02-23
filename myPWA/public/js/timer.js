@@ -14,6 +14,10 @@ var seconds;
 var x;
 
 window.onload = function() { 
+  setInterval(function() { // for system clock 
+    startTime = new Date();
+    clock.innerHTML = "Clock:" + " " + startTime.toLocaleTimeString();
+  }, 1000);
   checknotify(); //check users notification settings 
   comment = document.getElementById ('text');
   extra = document.getElementById ('extra');
@@ -26,11 +30,6 @@ window.onload = function() {
   clock = document.getElementById ('clock');
   setTime = document.getElementById('setTime');
   again = document.getElementById('again');
-  setInterval(function() { // for system clock 
-    startTime = new Date();
-    clock.innerHTML = "Clock:" + " " + startTime.toLocaleTimeString();
-  }, 1000);
-
   extra.innerHTML = "Please use : inbetween hours and minutes for correct results";
 }
 
