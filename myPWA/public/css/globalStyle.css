@@ -90,8 +90,9 @@ h2 {
 #date {
     font-family: Helvetica, sans-serif;
     font-size: 25px;
+    text-align: left;
     font-weight: bold;
-    text-align: right;
+    margin-left: 80px;
 }
 
 #extra {
@@ -103,12 +104,6 @@ h2 {
     margin-left: 5px;
     padding: 4px 32px;
     font-weight: bold;
-}
-
-#list {
-    float: left;
-    margin-top: 20px;
-    margin-left: 10px;
 }
 
 #dateselector {
