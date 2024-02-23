@@ -64,11 +64,11 @@ h2 {
 }
 
 #return {
-    float:left;
+    float: left;   
 }
 
 #help {
-    float:right;
+    float: right;
 }
 
 #clock {
@@ -99,8 +99,19 @@ h2 {
 }
 
 #add{
-    margin-top: 0px;
+    margin-top: 20px;
     margin-left: 5px;
     padding: 4px 32px;
     font-weight: bold;
+}
+
+#list {
+    float: left;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+#dateselector {
+    margin-top: 20px;
+    margin-left: 5px;
 }

@@ -91,11 +91,11 @@ function Timer() { // general countdown timer function and calculating the diffe
 }
 
 function stopTimer() { // when user use the pause button 
+  breakTime();
   plantGraphic.src = "images/watering.gif";
   comment.innerHTML = "5 minutes Break";
   pause.disabled = true;
   unpause.disabled = false;
-  breakTime();
 
 navigator.serviceWorker.register("serviceWorker.js");
 Notification.requestPermission().then((result) => {
@@ -119,10 +119,10 @@ function breakTime() { //cal break time
 }
 
 function resumeTimer() { // when unpaused button  is used 
+  timeLeft();
   plantGraphic.src = "images/altpot.gif";
   pause.disabled = false;
   unpause.disabled = true;
-  timeLeft();
 navigator.serviceWorker.register("serviceWorker.js");
 Notification.requestPermission().then((result) => {
   if (result === "granted") {
