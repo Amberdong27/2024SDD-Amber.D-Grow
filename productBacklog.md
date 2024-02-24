@@ -10,10 +10,10 @@
 - ~~Adding changing graphics~~ 
 - ~~Create database for study tips~~
 - ~~JS to construct front end JSON file~~
-- Create study planner page
-- Create input box for study planner 
-- Build base planner page with buttons 
-- Add another elements to planner page
+- ~~Create study planner page~~
+- ~~Create input box for study planner~~
+- ~~Build base planner page with buttons~~ 
+- ~~Add another elements to planner page~~
 - Store study plans in local memory 
 - Adding study plans 
 - Add relavent APIs
