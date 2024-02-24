@@ -118,6 +118,7 @@ function breakTime() { //cal break time
 function resumeTimer() { // when unpaused button  is used 
   timeLeft();
   plantGraphic.src = "images/altpot.gif";
+  comment.innerHTML = "Growing...";
   pause.disabled = false;
   unpause.disabled = true;
 navigator.serviceWorker.register("serviceWorker.js");
