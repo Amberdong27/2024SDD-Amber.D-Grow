@@ -14,10 +14,6 @@ var seconds;
 var x;
 
 window.onload = function() { 
-  setInterval(function() { // for system clock 
-    startTime = new Date();
-    clock.innerHTML = "Clock:" + " " + startTime.toLocaleTimeString();
-  }, 1000);
   checknotify(); //check users notification settings 
   comment = document.getElementById ('text');
   extra = document.getElementById ('extra');
