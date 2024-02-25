@@ -1,13 +1,13 @@
 var taskArray = [];
-//var storedTask;
 let result = "";
 var listTask = document.getElementById("content");
 let storedTask = localStorage.getItem('task') ? JSON.parse(localStorage.getItem('task')) : [];
 //var newTask = document.getElementById("setTask").value;
 //var dueDate = document.getElementById("setDate").value;
 
-window.onload = displayTask();
-
+window.onload = function () { 
+    displayTask();
+}
 function addTask(){
    var task = { 
         newTask: document.getElementById("setTask").value,
@@ -26,19 +26,22 @@ function saveTask(task) {
 }
 
 function displayTask() {
-   storedTask.forEach((tasks, index) => { 
-        result += ` 
-         <ul class="task-card"> 
-              <h2 class="name">Task: ${tasks.newTask}</h2> 
-              <p class="deadline">Due Date: ${tasks.deadline}</p> 
-              <button class="delete" onclick="removeTask(${index})"> Delete Task</button>
-          </ul> 
-         `; 
-      }); 
+    //for (var i= 0; i < storedTask.length; i++) {
+        storedTask.forEach((tasks, index) => { 
+            result += ` 
+             <div id= ${index} class="task-card"> 
+                  <h2 class="name">Task: ${tasks.newTask}</h2> 
+                  <p class="deadline">Due Date: ${tasks.deadline}</p> 
+                  <button class="delete" onclick="removeTask(${index})"> Delete Task</button>
+              </div> 
+             `; 
+          }); 
+   //}
     document.getElementById("list").innerHTML = result;
 }
 
 function removeTask(index) {
-    storedTask.splice(index, 1);
+    storedTask.splice(index);
     localStorage.setItem('task', JSON.stringify(storedTask)); 
-}
+    document.getElementById(index).remove();
+} 
