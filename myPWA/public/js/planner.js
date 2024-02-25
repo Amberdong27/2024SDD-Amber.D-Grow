@@ -1,45 +1,47 @@
-var tasksArray = [];
-var datesArray = [];
-var storedTask;
+var taskArray = [];
+//var storedTask;
+let result = "";
 var listTask = document.getElementById("content");
+let storedTask = localStorage.getItem('task') ? JSON.parse(localStorage.getItem('task')) : [];
 //var newTask = document.getElementById("setTask").value;
 //var dueDate = document.getElementById("setDate").value;
-// const list = document.querySelector('ul');
+
+window.onload = displayTask();
 
 function addTask(){
-   /* var newTask = document.getElementById("setTask").value;
-    var dueDate = document.getElementById("setDate").value;
-    tasksArray.push(newTask);
-    datesArray.push(dueDate);
-
-    displayTasks();
-
-    console.log (tasksArray);
-    console.log (datesArray); */
-
-      /*tasksArray.push(newTask);
-    datesArray.push(dueDate);
-
-    localStorage.setItem("taskname", JSON.stringify(tasksArray));
-    localStorage.setItem("deadline", dueDate);
-
-    storedTask = localStorage.getItem("taskname")
-
-    console.log(storedTask);
-    listTask.innerHTML = localStorage.getItem("taskname") */ 
-    
-   const task = { 
+   var task = { 
         newTask: document.getElementById("setTask").value,
         deadline: document.getElementById("setDate").value
     };
+    document.getElementById("setTask").value = "";
+    document.getElementById("setDate").value = "";
     saveTask(task);
 }
 
 function saveTask(task) {
-   const storedTask = JSON.parse(localStorage.getItem('task')) || [];
    storedTask.push(task);
    localStorage.setItem('task', JSON.stringify(storedTask));
-
-   taskData = JSON.parse(localStorage.getItem('task'))
-   console.log(taskData);
+   displayTask();
+   console.log(storedTask);
+   
 }
+
+function displayTask() {
+//const storedTask = JSON.parse(localStorage.getItem('task')) || [];
+   storedTask.forEach((items, index) => { 
+        result += ` 
+         <ul class="task-card"> 
+              <h2 class="name">Task: ${items.newTask}</h2> 
+              <p class="deadline">Due Date: ${items.deadline}</p> 
+              <button class="delete" onclick="removeTask(${index})"> X </button>
+          </ul> 
+         `; 
+      }); 
+    document.getElementById("list").innerHTML = result;
+}
+
+/*function removeTask(index) {
+// const storedTask = JSON.parse(localStorage.getItem('task')) || [];
+    storedTask.splice(index, 1);
+    localStorage.setItem('task', JSON.stringify(storedTask)); 
+} */
