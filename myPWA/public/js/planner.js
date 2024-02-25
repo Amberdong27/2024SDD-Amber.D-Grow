@@ -2,13 +2,11 @@ var taskArray = [];
 let result = "";
 var listTask = document.getElementById("content");
 let storedTask = localStorage.getItem('task') ? JSON.parse(localStorage.getItem('task')) : [];
-//var newTask = document.getElementById("setTask").value;
-//var dueDate = document.getElementById("setDate").value;
 
 window.onload = function () { 
     displayTask();
 }
-function addTask(){
+function addTask(){ //getting task from html 
    var task = { 
         newTask: document.getElementById("setTask").value,
         deadline: document.getElementById("setDate").value
@@ -18,14 +16,14 @@ function addTask(){
     saveTask(task);
 }
 
-function saveTask(task) {
+function saveTask(task) { //saving task in local storage
    storedTask.push(task);
    localStorage.setItem('task', JSON.stringify(storedTask));
    displayTask();
    console.log(storedTask);
 }
 
-function displayTask() {
+function displayTask() { //displaying task in html 
     //for (var i= 0; i < storedTask.length; i++) {
         storedTask.forEach((tasks, index) => { 
             result += ` 

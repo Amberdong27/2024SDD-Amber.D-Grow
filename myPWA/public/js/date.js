@@ -2,7 +2,7 @@ const monthNames = ["January", "February", "March", "April", "May", "June",
 "July", "August", "September", "October", "November", "December"
 ];
 
-setInterval(function() { 
+setInterval(function() { //date system 
 var todayDate = new Date();
 var currentyear = todayDate.getFullYear();
 var currentmonth = todayDate.getMonth({month:"long"});
