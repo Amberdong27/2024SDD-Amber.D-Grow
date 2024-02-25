@@ -35,7 +35,7 @@ body {
     background-color: white;
     font-family: Helvetica, sans-serif;
     width: 70%;
-    display: inline-flexbox;
+    display:inline-block;
     justify-content: center;
 }
 
@@ -48,6 +48,13 @@ h1 {
 h2 {
     font-family: Helvetica, sans-serif;
     font-size: 30px;
+    font-weight: bold;
+}
+
+h3 {
+    margin-top: 10px;
+    font-family: Helvetica, sans-serif;
+    font-size: 25px;
     font-weight: bold;
 }
 #start {
@@ -120,4 +127,11 @@ h2 {
 #dateselector {
     margin-top: 20px;
     margin-left: 5px;
+}
+
+#delete { 
+    padding: 10px 16px;
+    width: 150px;
+    position: relative;
+    display: center;
 }

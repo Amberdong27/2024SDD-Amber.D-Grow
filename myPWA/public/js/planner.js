@@ -9,37 +9,38 @@ window.onload = function () {
 function addTask(){ //getting task from html 
    var task = { 
         newTask: document.getElementById("setTask").value,
-        deadline: document.getElementById("setDate").value
+        deadline: document.getElementById("setDate").value,
     };
     document.getElementById("setTask").value = "";
     document.getElementById("setDate").value = "";
     saveTask(task);
+    window.location.reload(); //temporary fix
 }
 
 function saveTask(task) { //saving task in local storage
    storedTask.push(task);
    localStorage.setItem('task', JSON.stringify(storedTask));
-   displayTask();
    console.log(storedTask);
+   displayTask();
 }
 
 function displayTask() { //displaying task in html 
-    //for (var i= 0; i < storedTask.length; i++) {
+  // for (var i= 0; i < storedTask.length; i++) {
         storedTask.forEach((tasks, index) => { 
             result += ` 
-             <div id= ${index} class="task-card"> 
-                  <h2 class="name">Task: ${tasks.newTask}</h2> 
+             <div id = ${index} class="task-card"> 
+                  <h3 class="name">Task: ${tasks.newTask}</h3> 
                   <p class="deadline">Due Date: ${tasks.deadline}</p> 
-                  <button class="delete" onclick="removeTask(${index})"> Delete Task</button>
+                  <button class="btn" id= "delete" onclick="removeTask(${index})"> Delete Task</button>
               </div> 
              `; 
           }); 
-   //}
+  // }
     document.getElementById("list").innerHTML = result;
 }
 
 function removeTask(index) {
-    storedTask.splice(index);
+    storedTask.splice(index); //why does this not work properly with , 1
     localStorage.setItem('task', JSON.stringify(storedTask)); 
     document.getElementById(index).remove();
 } 
