@@ -23,25 +23,22 @@ function saveTask(task) {
    localStorage.setItem('task', JSON.stringify(storedTask));
    displayTask();
    console.log(storedTask);
-   
 }
 
 function displayTask() {
-//const storedTask = JSON.parse(localStorage.getItem('task')) || [];
-   storedTask.forEach((items, index) => { 
+   storedTask.forEach((tasks, index) => { 
         result += ` 
          <ul class="task-card"> 
-              <h2 class="name">Task: ${items.newTask}</h2> 
-              <p class="deadline">Due Date: ${items.deadline}</p> 
-              <button class="delete" onclick="removeTask(${index})"> X </button>
+              <h2 class="name">Task: ${tasks.newTask}</h2> 
+              <p class="deadline">Due Date: ${tasks.deadline}</p> 
+              <button class="delete" onclick="removeTask(${index})"> Delete Task</button>
           </ul> 
          `; 
       }); 
     document.getElementById("list").innerHTML = result;
 }
 
-/*function removeTask(index) {
-// const storedTask = JSON.parse(localStorage.getItem('task')) || [];
+function removeTask(index) {
     storedTask.splice(index, 1);
     localStorage.setItem('task', JSON.stringify(storedTask)); 
-} */
+}
