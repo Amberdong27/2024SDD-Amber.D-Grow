@@ -4,13 +4,13 @@ var deadlineArray = [];
 //let storedTask = localStorage.getItem('task') ? JSON.parse(localStorage.getItem('task')) : []; 
 
 /*window.onload = function () {
-    //localStorage.clear(); //to remove manually 
-    console.log(storedTasks);
-    console.log(storedDates);
+    localStorage.clear(); //to remove manually 
 
-} */
+}  */
 
-window.onload = loadTask();
+window.onload = function() {
+    loadTask();
+}
 
 function addTask(){ //getting task from html 
         var newTask = document.getElementById("setTask").value;
@@ -55,11 +55,21 @@ function removeTask(i) { //removing items form storage and display
 }
 
 function loadTask() {
-    var storedTasks = localStorage.listTasks;
-    var storedDates = localStorage.listDates;
+ var storedTasks = localStorage.listTasks;
+ var storedDates = localStorage.listDates;
     taskArray = storedTasks.split(",");
     deadlineArray = storedDates.split(",");
+  
+    if (deadlineArray == "" || taskArray == "") {
+   } 
+   else  if (deadlineArray == "" && taskArray == "") {
+   }
+   else {
     displayTask();
+   }
+    
+    console.log(storedTasks);
+    console.log(storedDates);
 }
 
 
