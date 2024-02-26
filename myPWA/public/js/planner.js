@@ -27,7 +27,7 @@ function addTask(){ //getting task from html
 }
 
 function displayTask() { //displaying task in html
-    arrayIndex = 0;
+    arrayIndex = 1;
     htmlString = "";
 
    while (arrayIndex < taskArray.length && deadlineArray.length) {
