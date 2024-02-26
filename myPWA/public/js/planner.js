@@ -25,9 +25,11 @@ function displayTask() { //displaying task in html
 
    while (arrayIndex < taskArray.length && deadlineArray.length) {
         newItem = "<div "+ "class='task-card'>" + 
-        "<h2>" +"Task: " + taskArray[arrayIndex] + "</h2>"+
-         "<p "+ "class='deadline'>" + "Due Date:"+ deadlineArray[arrayIndex] + "</p>" + 
-         "<button " + "class= 'btn'" + "id='delete'" + "onclick='removeTask(" + arrayIndex + ")';>"+ "Delete Task" +"</button> " + "</div>";
+        "<h2>" +"Task: " + "</h2>" + 
+        "<p"  + "class= 'task'>" + taskArray[arrayIndex] + "</p>" +
+        "<p "+ "class='deadline'>" + "Due Date: "+ deadlineArray[arrayIndex] + "</p>" + 
+        "<button " + "class= 'btn'" + "id='delete'" + "onclick='removeTask(" + arrayIndex + ")';>"+ "Delete Task" +"</button> " 
+        + "</div>";
         htmlString = htmlString + newItem;
         arrayIndex = arrayIndex + 1;
         } 
@@ -47,7 +49,7 @@ function removeTask(i) { //removing items form storage and display
 
 }
 
-function loadTask() {
+function loadTask() { //loading previous stored task data
  var storedTasks = localStorage.listTasks;
  var storedDates = localStorage.listDates;
     taskArray = storedTasks.split(",");
