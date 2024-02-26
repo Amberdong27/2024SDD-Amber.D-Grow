@@ -4,10 +4,9 @@ let taskCard = "";
 //var listTask = document.getElementById("content");
 //let storedTask = localStorage.getItem('task') ? JSON.parse(localStorage.getItem('task')) : [];
 
-/* window.onload = function () {
-    console.log(storedTask);
+window.onload = function () {
     displayTask();
-} */
+}
 
 function addTask(){ //getting task from html 
       /* var task = { 
@@ -21,7 +20,6 @@ function addTask(){ //getting task from html
         deadlineArray.push(deadline);
         console.log(taskArray);
         console.log(deadline);
-
         document.getElementById("setTask").value = "";
         document.getElementById("setDate").value = "";
         displayTask(); 
@@ -33,8 +31,8 @@ function displayTask() {
     arrayIndex = 0;
     htmlString = "";
       while (arrayIndex < taskArray.length && deadlineArray.length) {
-        newItem = "<div "+ "class='task-card'>" +"<h2>" +"Task: " + taskArray[arrayIndex] + 
-        "</h2>"+ "<p "+ "class='deadline'>" + "Due Date:"+ deadlineArray[arrayIndex] + "</p>" + "<button " + "class= 'btn'" + "id='delete'"+ taskArray[arrayIndex] + "'onclick='removeListItem(" + arrayIndex + ")';>"+ 
+        newItem = "<div "+ "class='task-card'>" + "<h2>" +"Task: " + taskArray[arrayIndex] + 
+        "</h2>"+ "<p "+ "class='deadline'>" + "Due Date:"+ deadlineArray[arrayIndex] + "</p>" + "<button " + "class= 'btn'" + "id='delete'" + "onclick='removeTask(" + arrayIndex + ")';>"+
         "Delete Task" +"</button> " + "</div>";
         htmlString = htmlString + newItem;
         arrayIndex = arrayIndex + 1;
@@ -42,7 +40,14 @@ function displayTask() {
         document.getElementById("content").innerHTML = htmlString;
 }
 
-
+function removeTask(i) {
+    console.log("button works");
+    taskArray.splice(i, 1);
+    deadlineArray.splice(i, 1); 
+    displayTask();
+    console.log(taskArray);
+    console.log(deadline);
+}
 
 
 /* function saveTask(task) { //saving task in local storage
