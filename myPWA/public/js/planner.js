@@ -1,39 +1,36 @@
 var taskArray = [];
 var deadlineArray = [];
-//var listTask = document.getElementById("content");
-let storedTask = localStorage.getItem('task') ? JSON.parse(localStorage.getItem('task')) : [];
+//var storedTask = [];
+//let storedTask = localStorage.getItem('task') ? JSON.parse(localStorage.getItem('task')) : []; 
 
-window.onload = function () {
-    displayTask();
-   // localStorage.clear(); //to remove manually 
-    console.log(storedTask);
+/*window.onload = function () {
+    //localStorage.clear(); //to remove manually 
+    console.log(storedTasks);
+    console.log(storedDates);
 
-}
+} */
+
+window.onload = loadTask();
 
 function addTask(){ //getting task from html 
         var newTask = document.getElementById("setTask").value;
         var deadline = document.getElementById("setDate").value;
         taskArray.push(newTask);
         deadlineArray.push(deadline);
-        storingTask(newTask, deadline);
-        console.log(taskArray);
-        console.log(deadline);
+       // storingTask(newTask, deadline);
         document.getElementById("setTask").value = "";
         document.getElementById("setDate").value = "";
-        displayTask(); 
+        displayTask();
+
+        console.log(taskArray);
+        console.log(deadline);
 }
 
 function displayTask() { //displaying task in html
     arrayIndex = 0;
     htmlString = "";
-   /* //let item = localStorage.getItem('task', JSON.stringify(storedTask));
-    for (var i=0; i <storedTask.length; i++) {
-        newItem = "<div "+ "class='task-card'>" + "<h2>" +"Task: " + storedTask.taskName + 
-        "</h2>"+ "<p "+ "class='deadline'>" + "Due Date:"+ storedTask.taskDate + "</p>" + 
-        "<button " + "class= 'btn'" + "id='delete'" + "onclick='removeTask(" + i + ")';>"+ "Delete Task" +"</button> " + "</div>";
-        htmlString = htmlString + newItem;
-    }; */
-    while (arrayIndex < storedTask.length) {
+
+   while (arrayIndex < taskArray.length && deadlineArray.length) {
         newItem = "<div "+ "class='task-card'>" + 
         "<h2>" +"Task: " + taskArray[arrayIndex] + "</h2>"+
          "<p "+ "class='deadline'>" + "Due Date:"+ deadlineArray[arrayIndex] + "</p>" + 
@@ -42,30 +39,56 @@ function displayTask() { //displaying task in html
         arrayIndex = arrayIndex + 1;
         } 
         document.getElementById("content").innerHTML = htmlString;
+        localStorage.listTasks = taskArray.join();
+        localStorage.listDates = deadlineArray.join(); 
 }
+
 
 function removeTask(i) { //removing items form storage and display
     console.log("button works");
     taskArray.splice(i, 1);
-    deadlineArray.splice(i, 1); 
-    storedTask.splice(i, 1 ); 
-    localStorage.setItem('task', JSON.stringify(storedTask)); 
+    deadlineArray.splice(i, 1);  
     displayTask();
     console.log(taskArray);
     console.log(deadlineArray);
-    console.log(storedTask);
+
 }
 
-function storingTask(newTask, deadline) {
-    var taskData = {
+function loadTask() {
+    var storedTasks = localStorage.listTasks;
+    var storedDates = localStorage.listDates;
+    taskArray = storedTasks.split(",");
+    deadlineArray = storedDates.split(",");
+    displayTask();
+}
+
+
+
+
+
+
+/*function storingTask(newTask, deadline) {
+
+        
+   /* //let item = localStorage.getItem('task', JSON.stringify(storedTask));
+    for (var i=0; i <storedTask.length; i++) {
+        newItem = "<div "+ "class='task-card'>" + "<h2>" +"Task: " + storedTask.taskName + 
+        "</h2>"+ "<p "+ "class='deadline'>" + "Due Date:"+ storedTask.taskDate + "</p>" + 
+        "<button " + "class= 'btn'" + "id='delete'" + "onclick='removeTask(" + i + ")';>"+ "Delete Task" +"</button> " + "</div>";
+        htmlString = htmlString + newItem;
+    }; */
+
+  /* var taskData = {
         taskName: newTask,
         taskDate: deadline,
-    }
+    } 
     storedTask.push(taskData);
-    localStorage.setItem('task', JSON.stringify(storedTask));
-    console.log(storedTask);
+    localStorage.setItem('task', JSON.stringify(storedTask)); 
+        console.log(storedTask);   
 }
-
+ */
+  
+  
       /* var task = { 
             newTask: document.getElementById("setTask").value,
             deadline: document.getElementById("setDate").value,
