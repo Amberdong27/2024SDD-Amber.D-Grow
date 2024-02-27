@@ -9,20 +9,20 @@ Grow is a simple study application made to help student's studies. The applicati
 - Notifications for when the countdown finishes, pause or unpauses
 
 #### Preview Images
-![] (https://github.com/TempeHS/2024SDD-Amber.D-Grow/blob/main/previewImages/TimerPV.png)
+![](https://github.com/TempeHS/2024SDD-Amber.D-Grow/blob/main/previewImages/TimerPV.png)
 
 ### Study Planner 
 - Allows user to add task and save thems until user deletes them 
 - User can record due dates/deadlines along with the task 
 
 #### Preview Images
-![] (https://github.com/TempeHS/2024SDD-Amber.D-Grow/blob/main/previewImages/PlannerPV.png)
+![](https://github.com/TempeHS/2024SDD-Amber.D-Grow/blob/main/previewImages/PlannerPV.png)
 
 ### Study Tips
 - User can select from a preselection of study tips
 
 #### Preview Images 
-![] (https://github.com/TempeHS/2024SDD-Amber.D-Grow/blob/main/previewImages/TipsPV.png)
+![](https://github.com/TempeHS/2024SDD-Amber.D-Grow/blob/main/previewImages/TipsPV.png)
 
 ### Other Notes for Developer: 
 This progressive web application was design and made for my Year 12 Software Design and Development Major Task Assignment. 
