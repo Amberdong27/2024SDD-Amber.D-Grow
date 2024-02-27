@@ -14,6 +14,6 @@
 - ~~Create input box for study planner~~
 - ~~Build base planner page with buttons~~ 
 - ~~Add another elements to planner page~~
-- Store study plans in local memory 
-- Adding study plans 
-- Add relavent APIs
+- ~~Store study plans in local memory~~ 
+- ~~Adding study plans~~ 
+- ~~Add relavent APIs~~
