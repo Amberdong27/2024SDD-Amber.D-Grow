@@ -6,7 +6,7 @@ Grow is a simple study application made to help student's studies. The applicati
 - Switching Graphics
 - 5 min Break Times
 - Pausing, unpausing and end early functions 
-- Has Notification for when the countdown finishes, pause or unpauses
+- Notifications for when the countdown finishes, pause or unpauses
 
 ### Study Planner 
 - Allows user to add task and save thems until user deletes them 
@@ -23,4 +23,4 @@ It includes a PWA, SQL database & another APIs (such as Local Storage and Notifi
 Click title link for backlog
 
 ## [Agile Artifacts](/AgileArtifacts.md)
-Title Link to Agile Artifacts
+Title Link to most recent Agile Artifacts
