@@ -18,14 +18,15 @@
           </div>
         <div id="date" class="container"> </div>
           <div class="col">
-            <input type="text" id="setPlan" value="Enter Task"> 
+            <label for="task">Enter Task Here:</label>
+            <input type="text" id="setTask" value=""> 
           </div>
           <div class="col" id="dateselector">
             <label for="task">Select Due Date:</label>
             <input type="date" id="setDate" name="selectDate">
           </div>
           <div>
-            <button id="add" type="button" class="btn" onclick="addPlan();">Add Task</button>
+            <button id="addTask" type="button" class="btn" onclick="addTask();">Add Task</button>
           </div>
           <div class="col">
           <div class="text-center">
@@ -34,9 +35,6 @@
                 <div id="content"></div>
               </div>
             </div>
-    <div class="col-13">
-      <button id="again" type = "button" class="btn" onclick="Again()" disabled>Again</button>
-      <div class="container"></div>
       <a href= 'index.html'>
         <button id="return" type="button" class="btn">RETURN</button>
       </a>

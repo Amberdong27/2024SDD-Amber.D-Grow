@@ -12,20 +12,22 @@ var hours;
 var minutes;
 var seconds;
 var x;
+var pauseduration;
+var End;
+var comment = document.getElementById ('text');
+var extra = document.getElementById ('extra');
+var plantGraphic = document.getElementById ('plantGraphic');
+var unpause = document.getElementById ('unpause');
+var end = document.getElementById('end');
+var pause = document.getElementById('pause');
+var countdown = document.getElementById('countdown');
+var start = document.getElementById('start');
+var clock = document.getElementById ('clock');
+var setTime = document.getElementById('setTime');
+var again = document.getElementById('again');
 
 window.onload = function() { 
   checknotify(); //check users notification settings 
-  comment = document.getElementById ('text');
-  extra = document.getElementById ('extra');
-  plantGraphic = document.getElementById ('plantGraphic');
-  unpause = document.getElementById ('unpause');
-  end = document.getElementById('end');
-  pause = document.getElementById('pause');
-  countdown = document.getElementById('countdown');
-  start = document.getElementById('start');
-  clock = document.getElementById ('clock');
-  setTime = document.getElementById('setTime');
-  again = document.getElementById('again');
   extra.innerHTML = "Please use : inbetween hours and minutes for correct results";
 }
 
@@ -116,6 +118,7 @@ function breakTime() { //cal break time
 function resumeTimer() { // when unpaused button  is used 
   timeLeft();
   plantGraphic.src = "images/altpot.gif";
+  comment.innerHTML = "Growing...";
   pause.disabled = false;
   unpause.disabled = true;
 navigator.serviceWorker.register("serviceWorker.js");
