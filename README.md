@@ -24,7 +24,7 @@ Grow is a simple study application made to help student's studies. The applicati
 #### Preview Images 
 ![](https://github.com/TempeHS/2024SDD-Amber.D-Grow/blob/main/previewImages/TipsPV.png)
 
-### [Other Notes for Developer:] 
+### Other Notes from Developer:
 This progressive web application was design and made for my Year 12 Software Design and Development Major Task Assignment. 
 It includes a PWA, SQL database & another APIs (such as Local Storage and Notification).
 
