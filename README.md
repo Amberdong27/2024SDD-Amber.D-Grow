@@ -1,7 +1,7 @@
 # 2024SDD-Amber.D-Grow
 Grow is a simple study application made to help student's studies. The application includes a study timer, planner and tips features. 
 
-### [Study Timer] 
+### Study Timer 
 - Allows user to set a study timer for how long they want to study for 
 - Switching Graphics
 - 5 min Break Times
@@ -11,14 +11,14 @@ Grow is a simple study application made to help student's studies. The applicati
 #### Preview Images
 ![](https://github.com/TempeHS/2024SDD-Amber.D-Grow/blob/main/previewImages/TimerPV.png)
 
-### [Study Planner] 
+### Study Planner 
 - Allows user to add task and save thems until user deletes them 
 - User can record due dates/deadlines along with the task 
 
 #### Preview Images
 ![](https://github.com/TempeHS/2024SDD-Amber.D-Grow/blob/main/previewImages/PlannerPV.png)
 
-### [Study Tips]
+### Study Tips
 - User can select from a preselection of study tips
 
 #### Preview Images 
