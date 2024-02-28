@@ -39,7 +39,6 @@ body {
     justify-content: center;
 }
 
-
 .deadline {
     font-size: 15px;
     font-weight: bold;
@@ -50,14 +49,20 @@ body {
    text-align: justify;
 }
 
+.img-fluid {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 h1 {
+    margin-top: 10px;
     font-family: Helvetica, sans-serif;
     font-size: 40px;
     font-weight: bold;
 }
 
 h2 {
-    margin-top: 10px;
+    margin-top: 20px;
     font-family: Helvetica, sans-serif;
     font-size: 30px;
     font-weight: bold;
@@ -67,6 +72,17 @@ h3 {
     margin-top: 10px;
     font-family: Helvetica, sans-serif;
     font-size: 25px;
+    font-weight: bold;
+}
+
+h4 {
+    margin-top: 10px;
+}
+
+li {
+    margin-top: 35px;
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
     font-weight: bold;
 }
 
@@ -99,11 +115,11 @@ p {
     visibility:hidden;
 }
 
-#return {
+#leftbtn {
     float: left;
 }
 
-#help {
+#rightbtn {
     float: right;
 }
 
@@ -152,4 +168,8 @@ p {
     width: 150px;
     position: relative;
     display: center;
+}
+
+#help-text {
+    margin-top: 40px;
 }

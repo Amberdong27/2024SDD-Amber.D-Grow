@@ -1,26 +1,22 @@
 # Agile Artifacts 
 
 ## Sprint backlog list of achievables (annotate changes made during sprint, including data required)
-- Task are correctly sortted into arrays 
-- Task display correctly on user screen 
-- Task can be removed correctly off user screen 
-- Tasks can be stored and removed from local storage
-- Displays Task from local storage
-- Align long text to fit with box 
+ - Styled the HTML for Timer Help
+ - Will be arranging it into the selectable selector for Timer Help
+ - Arranged selectable and HTML for selector in Timer Help 
+ - Styled HTML for Planner Help
+ - Styled HTML for Study Tips Help
 
 ## Increment (what must be achieved by the end of the sprint)
-- ~~Store study plans in local memory~~
-- ~~Adding study plans~~ 
-- ~~Add relavent APIs~~
-- ~~Displays items already in local storage (new)~~
+- ~~User Help Guide for Study Timer page~~
+- ~~User Help Guide for Study Planner page~~
+- ~~User Help Guide for Study Tips page~~
 
 
 ## Sprint Review 
 ### What challenges did you have
-- Pushing into local storage and pull items out of local storage
-- Getting the items to display correctly according to the user input data  
+- The main challenge was probably organising the user documentation so its easier for the user to understand
 ### What did you do well
-- Styling the text box
-- Figuring out how the planner to process the inputs correctly and displaying them 
+- I think I did the dropdown menu well as it can seamlessly switch between different options 
 ### What will you do differently next time
-- Next time I would try and organise the inputs differently and try my hand at pushing from frontEnd to backEnd 
+- Perhaps styling it slightly better than what I have right now
