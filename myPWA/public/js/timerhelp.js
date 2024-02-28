@@ -34,9 +34,9 @@ function selection() {
       } else if (value == "3") {
         document.getElementById("helpContent").innerHTML = "";
         var newContent = '<h3 class="help-text">Errors and Solutions</h3>' +
-        '<h4 class="help-text">Error: If switch between pause and unpause to quickly. It will crash the timer</h4>' +
+        '<li class="help-text">Error: If switch between pause and unpause to quickly. It will crash the timer</li>' +
         '<p class="help-text"><span style = "font-weight:bold">Solution:</span> Reload the Page </p>' +
-        '<h4 class="help-text">Error: Graphics is not changing properly</h4>' +
+        '<li class="help-text">Error: Graphics is not changing properly</li>' +
         '<p class="help-text"> <span style = "font-weight:bold">Solution:</span> If this occurs you can either wait or reload the page and start the timer again </p>;';
         document.getElementById("helpContent").innerHTML = newContent;
       }

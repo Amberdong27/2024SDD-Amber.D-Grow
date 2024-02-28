@@ -39,7 +39,6 @@ body {
     justify-content: center;
 }
 
-
 .deadline {
     font-size: 15px;
     font-weight: bold;
@@ -48,6 +47,11 @@ body {
 .task { 
    word-break: break-all;
    text-align: justify;
+}
+
+.img-fluid {
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 h1 {
@@ -73,6 +77,13 @@ h3 {
 
 h4 {
     margin-top: 10px;
+}
+
+li {
+    margin-top: 35px;
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 p {
@@ -160,5 +171,5 @@ p {
 }
 
 #help-text {
-    margin-top: 30px;
+    margin-top: 40px;
 }
