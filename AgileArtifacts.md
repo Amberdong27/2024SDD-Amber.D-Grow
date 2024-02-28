@@ -1,7 +1,8 @@
 # Agile Artifacts 
 
 ## Sprint backlog list of achievables (annotate changes made during sprint, including data required)
- 
+ - Styled the HTML 
+ - Will be arranging it into the selectable selector
 
 ## Increment (what must be achieved by the end of the sprint)
 - User Help Guide for Study Timer page
