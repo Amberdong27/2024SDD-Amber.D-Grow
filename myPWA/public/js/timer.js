@@ -28,7 +28,7 @@ var again = document.getElementById('again');
 
 window.onload = function() { 
   checknotify(); //check users notification settings 
-  extra.innerHTML = "Please use : inbetween hours and minutes for correct results";
+  extra.innerHTML = "Add ':' between hours and minutes. Single digits please add a 0 before it for accurate results";
 }
 
 function startTimer() { //when the start button is pressed + getting the inputted time 
