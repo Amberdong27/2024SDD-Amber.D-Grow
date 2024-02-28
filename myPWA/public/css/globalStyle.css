@@ -99,11 +99,11 @@ p {
     visibility:hidden;
 }
 
-#return {
+#leftbtn {
     float: left;
 }
 
-#help {
+#rightbtn {
     float: right;
 }
 
