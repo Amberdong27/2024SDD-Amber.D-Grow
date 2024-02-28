@@ -33,7 +33,7 @@ function selection() {
         document.getElementById("helpContent").innerHTML = newContent;
       } else if (value == "3") {
         document.getElementById("helpContent").innerHTML = "";
-        var newContent = '<h3 class="help-text">Errors and Solutions</h3>' +
+        var newContent = '<h1 class="help-text">Errors and Solutions</h1>' +
         '<li class="help-text">Error: If switch between pause and unpause to quickly. It will crash the timer</li>' +
         '<p class="help-text"><span style = "font-weight:bold">Solution:</span> Reload the Page </p>' +
         '<li class="help-text">Error: Graphics is not changing properly</li>' +
