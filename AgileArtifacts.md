@@ -4,7 +4,7 @@
 - ~~Creating a simple landing page with two buttons~~ (Added extra button for achievement for maybe future use)
 - ~~Formatting landing page~~ (Added Step)
 - ~~Creating a logo for the application and adding it to the app~~ 
-- ~~Testing if the buttons work ~~
+- ~~Testing if the buttons work~~
 - ~~Creating two addition blank pages~~ (Three blank pages due to added button)
 - ~~Linking them to their respective buttons~~
 
