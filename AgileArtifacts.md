@@ -18,7 +18,8 @@
 
 ## Sprint Review 
 ### What challenges did you have
-
+- The main challenge was probably organising the user documentation so its easier for the user to understand
 ### What did you do well
-
+- I think I did the dropdown menu well as it can seamlessly switch between different options 
 ### What will you do differently next time
+- Perhaps styling it slightly better than what I have right now
