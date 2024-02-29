@@ -1,11 +1,7 @@
 var startTime;
 var endTime;
-var time;
-var startDate 
-var endDate;
 var timerMinutes;
 var timerHours;
-var timerSeconds;
 var timeEnded = false;
 var difference;
 var hours;
@@ -35,12 +31,12 @@ function startTimer() { //when the start button is pressed + getting the inputte
   pickedTime = setTime.value;
   timerMinutes = Number(pickedTime.substring(3));
   timerHours = Number(pickedTime.substring(0,2));
-  startDate = new Date();
-  endDate = new Date();
-  endDate.setHours(startDate.getHours() + timerHours);
-  endDate.setMinutes(startDate.getMinutes() + timerMinutes);
+  startTime = new Date();
+  endTime = new Date();
+  endTime.setHours(startTime.getHours() + timerHours);
+  endTime.setMinutes(startTime.getMinutes() + timerMinutes);
 
-    if (startDate.toLocaleTimeString() >= endDate.toLocaleTimeString()||pickedTime.value == "00:00") {
+    if (startTime.toLocaleTimeString() >= endTime.toLocaleTimeString()||pickedTime.value == "00:00") {
       countdown.innerHTML = "Write a valid time";
     } else {
       plantGraphic.src = "images/altpot.gif";
@@ -48,7 +44,7 @@ function startTimer() { //when the start button is pressed + getting the inputte
       start.style.visibility = "hidden";
       setTime.disabled = true;
       setTime.style.visibility = "hidden";
-      extra.innerHTML = "Study End Time: " + endDate.toLocaleTimeString();
+      extra.innerHTML = "Study End Time: " + endTime.toLocaleTimeString();
       pause.disabled = false;
       pause.style.visibility = "visible";
       end.disabled = false;
@@ -62,8 +58,8 @@ function startTimer() { //when the start button is pressed + getting the inputte
 
 function Timer() { // general countdown timer function and calculating the difference 
    x = setInterval(function() {
-    startDate = new Date();
-    difference = endDate - startDate;
+    startTime = new Date();
+    difference = endTime - startTime;
     hours = Math.floor((difference % (1000*60*60*60*24))/(1000*60*60));
     minutes = Math.floor((difference % (1000*60*60))/(1000*60));
     seconds = Math.floor((difference % (1000*60))/1000);
@@ -106,12 +102,12 @@ Notification.requestPermission().then((result) => {
 }
 
 function breakTime() { //cal break time
-  startDate = undefined;
-  endDate = undefined;
-  startDate = new Date();
-  endDate = new Date ();
-  endDate.setMinutes(startDate.getMinutes() + 5);
-  extra.innerHTML = "Break Time End: " + endDate.toLocaleTimeString();
+  startTime = undefined;
+  endTime = undefined;
+  startTime = new Date();
+  endTime = new Date ();
+  endTime.setMinutes(startTime.getMinutes() + 5);
+  extra.innerHTML = "Break Time End: " + endTime.toLocaleTimeString();
   clearInterval(x);
 }
 
@@ -133,14 +129,14 @@ Notification.requestPermission().then((result) => {
 }
 
 function timeLeft() { // recalculating end time using left over time difference from when the pause button is hit 
-  startDate = undefined;
-  endDate = undefined;
-  startDate = new Date();
-  endDate = new Date ();
-  endDate.setHours(startDate.getHours() + hours);
-  endDate.setMinutes(startDate.getMinutes() + minutes);
-  endDate.setSeconds(startDate.getSeconds() + seconds);
-  extra.innerHTML = "Study End Time: " + endDate.toLocaleTimeString();
+  startTime = undefined;
+  endTime = undefined;
+  startTime = new Date();
+  endTime = new Date ();
+  endTime.setHours(startTime.getHours() + hours);
+  endTime.setMinutes(startTime.getMinutes() + minutes);
+  endTime.setSeconds(startTime.getSeconds() + seconds);
+  extra.innerHTML = "Study End Time: " + endTime.toLocaleTimeString();
   Timer();
 }
 

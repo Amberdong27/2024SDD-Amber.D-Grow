@@ -3,6 +3,18 @@ This application is run on a PWA system, where the SQL database is used for the 
 
 ## Main Variables 
 ### Study Timer
+- `startTime` - gets locale time asstart time
+- `endTime`- gets locale time and additional time for when timer ends 
+- `plantGraphic` - Changes between images/graphics
+                         - Pot -> Setting Time
+                         - Growing Plant/Sprout -> Timer counting down 
+                         - Watering Plant -> Pausing Timer (Break Time)
+                         - Dead/Wilted Plant -> User ends timer early 
+                         - Grown Plant -> Timer ends naturally 
+- `pauseduration` - gets locale time and adds additional time for break
+- `difference` - calculate the difference between endDate and startDate
+- `timerHours` - gets the first to substring of user input
+- `timerMinutes` - gets the 3rd and 4th substring of user input 
 
 ### Study Planner
 
@@ -21,25 +33,19 @@ This application is run on a PWA system, where the SQL database is used for the 
 - `success()` - When timer ends naturally displays successful end UI 
 - `finishUI()` - Button modification for end UIs 
 - `checknotify()` - Checks user's notification settings 
+- `clock.js` - For accurate time, clock function is placed in a seperate js 
 
 #### Other Notes: 
 - Clock and Current Timer is set using LocaleTime function 
 - User can only input Hours and Minutes 
 - Break Time goes for an additional 30 seconds as a leeway 
-- Changes between images/graphics
-    - Pot -> Setting Time
-    - Growing Plant/Sprout -> Timer counting down 
-    - Watering Plant -> Pausing Timer (Break Time)
-    - Dead/Wilted Plant -> User ends timer early 
-    - Grown Plant -> Timer ends naturally 
-
-
 
 ### Study Planner
 - `addTask()` - Adds Task to taskArray and Due Date to deadlineArray
 - `displayTask()` - Gets items from local storage arrays and displays them as a task card
 - `removeTask()` - Gets the item by index and removes from corresponding array and re-store them into local storage
 - `loadTask()` - When planner first loads checks if there are any items in array and displays them 
+- `date.js` - For accurate date, date function is placed in a seperate js 
 
 #### Other Notes: 
 - Displayed stored task in a task card including: Task Details, Due Date & Delete Task
