@@ -1,25 +1,33 @@
 # Maintenance 
 This application is run on a PWA system, where the SQL database is used for the study tips function. 
+Most time related functions are run on the LocaleTime/Date function. Local Storage is also used to store task data.
 
 ## Main Variables 
 ### Study Timer
 - `startTime` - gets locale time asstart time
 - `endTime`- gets locale time and additional time for when timer ends 
 - `plantGraphic` - Changes between images/graphics
-                         - Pot -> Setting Time
-                         - Growing Plant/Sprout -> Timer counting down 
-                         - Watering Plant -> Pausing Timer (Break Time)
-                         - Dead/Wilted Plant -> User ends timer early 
-                         - Grown Plant -> Timer ends naturally 
+    - Pot -> Setting Time
+    - Growing Plant/Sprout -> Timer counting down 
+    - Watering Plant -> Pausing Timer (Break Time)
+    - Dead/Wilted Plant -> User ends timer early 
+    - Grown Plant -> Timer ends naturally 
 - `pauseduration` - gets locale time and adds additional time for break
 - `difference` - calculate the difference between endDate and startDate
-- `timerHours` - gets the first to substring of user input
+- `timerHours` - gets the first two substring of user input
 - `timerMinutes` - gets the 3rd and 4th substring of user input 
 
 ### Study Planner
+- `taskArray` - stores entered task until page reloads 
+- `deadlineArray` - stores entered due dates until page reloads 
+- `arrayIndex` - gets the item of that index and increment to get next time 
+- `storedTasks` - local storage for tasks until deleted 
+- `storedDates` - local storage for due dates until deleted
 
 ### Study Tips
-
+- `tipID` - ID of the tip, ID is organised from 1 -> last tip number, from SQL database
+- `name` - name of the tip from SQL database
+- `details` - details/information of the tip from SQL database
 
 ## List of Functions 
 ### Study Timer 
@@ -36,7 +44,6 @@ This application is run on a PWA system, where the SQL database is used for the 
 - `clock.js` - For accurate time, clock function is placed in a seperate js 
 
 #### Other Notes: 
-- Clock and Current Timer is set using LocaleTime function 
 - User can only input Hours and Minutes 
 - Break Time goes for an additional 30 seconds as a leeway 
 
@@ -54,10 +61,7 @@ This application is run on a PWA system, where the SQL database is used for the 
 - `appendData()` - Pulls tips data from SQL database and creates displays for each of them 
 - `selection()` - Shows specific data depending on user selection using dropdown 
 
-#### Other Notes 
-- Data is organised by tipID, name, details 
-    - ID is organised from 1 -> last tip number 
 
-## Errors and Issues with Applications
+## List Errors and Issues with Applications
 - Lag of displaying locale time clock in the Study Timer and Date for the Study Tips 
 - Errors if you switch between pause and unpause to quickly due to calculation lag 
