@@ -2,6 +2,9 @@
 This application is run on a PWA system, where the SQL database is used for the study tips function. 
 Most time related functions are run on the LocaleTime/Date function. Local Storage is also used to store task data.
 
+## Installation Requirements 
+The application is run on a Express Web Server. The application is also split between public and private files where the public files should be pushed forwards for user use, while the private files are for the developer use. 
+
 ## Main Variables 
 ### Study Timer
 - `startTime` - gets locale time asstart time

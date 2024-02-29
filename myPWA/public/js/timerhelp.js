@@ -28,8 +28,8 @@ function selection() {
       } else if (value == "2") { //Loading Notificaition Help Guide
         document.getElementById("helpContent").innerHTML = "";
 
-        var newContent = '<h1>Notifcation Help</h1>' +
-        '<h3> Note: Notifications does not work on Mobile Safari </h3>' +
+        var newContent = '<h1>Notification Help</h1>' +
+        '<h3> Note: Notification does not work on Mobile Safari </h3>' +
         '<p> If you wish to get notification of when the timer ends, pause or resumes.</p>' +
         '<p>Please allow notification for the application</p>' +
         '<img src="images/Notification.gif"  class="img-fluid" width="300" height="200"></img>';
