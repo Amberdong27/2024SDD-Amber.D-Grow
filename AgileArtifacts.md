@@ -1,14 +1,14 @@
 # Agile Artifacts 
 
 ## Sprint backlog list of achievables (annotate changes made during sprint, including data required)
-- ~~Build base timer page with buttons~~
-- ~~Added gif elements to timer page~~ 
-- ~~Added three select time options~~ 
-- ~~Added a return to landing page button~~ 
+- Built base timer page with buttons
+- Added gif elements to timer page 
+- Added three select time options 
+- Added a return to landing page button
 - Added Timer/Countdown Timer to page 
-- ~~Let graphics changing according to if its being used ~~
-- ~~Add a pause button and a stop button after a time is set~~ 
-- ~~Add a reset button for after it finishes~~ 
+- Graphics can change according to if its being used
+- Added a pause button and a stop button after a time is set
+- Added a reset button for after it finishes 
 
 
 Changes: 
@@ -17,8 +17,8 @@ Changes:
 - Added a Help button for user experience
 
 ## Increment (what must be achieved by the end of the sprint)
-- Build base timer page with buttons
-- Add another elements to timer page (Expanded)
+- ~~Build base timer page with buttons~~
+- ~~Add another elements to timer page~~ (Expanded)
 
 
 ## Sprint Review 
