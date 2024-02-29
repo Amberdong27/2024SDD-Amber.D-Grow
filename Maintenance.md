@@ -2,8 +2,13 @@
 This application is run on a PWA system, where the SQL database is used for the study tips function. 
 Most time related functions are run on the LocaleTime/Date function. Local Storage is also used to store task data.
 
-## Installation Requirements 
-The application is run on a Express Web Server. The application is also split between public and private files where the public files should be pushed forwards for user use, while the private files are for the developer use. 
+## Installation 
+The application is run on a Express Web Server and is built of node.js, therefore it is a requirement for developers if they wish to run their own servers. The servers and application is run through the Tempe High School GitHub. The application is also split between public and private files where the public files should be pushed forwards for user use such as the htmls, css and js files. While the private files such as the database are for the developer use. 
+
+#### Extra Notes: 
+- Each HTML that has a js attached have the same name for ease of understanding (expect the clock.js and date.js made specifically for those functions)
+- All styling for every html is done in the globalStyle.css
+- Images can be found in the images folder in the public files
 
 ## Main Variables 
 ### Study Timer
@@ -26,6 +31,7 @@ The application is run on a Express Web Server. The application is also split be
 - `arrayIndex` - gets the item of that index and increment to get next time 
 - `storedTasks` - local storage for tasks until deleted 
 - `storedDates` - local storage for due dates until deleted
+- `date.js` - gets the users current local time 
 
 ### Study Tips
 - `tipID` - ID of the tip, ID is organised from 1 -> last tip number, from SQL database
