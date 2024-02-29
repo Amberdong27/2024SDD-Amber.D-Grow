@@ -55,6 +55,7 @@ The application is run on a Express Web Server and is built of node.js, therefor
 #### Other Notes: 
 - User can only input Hours and Minutes 
 - Break Time goes for an additional 30 seconds as a leeway 
+- Cannot detect the difference between letters and integers (will error if letter is entered)
 
 ### Study Planner
 - `addTask()` - Adds Task to taskArray and Due Date to deadlineArray
@@ -74,3 +75,4 @@ The application is run on a Express Web Server and is built of node.js, therefor
 ## List Errors and Issues with Applications
 - Lag of displaying locale time clock in the Study Timer and Date for the Study Tips 
 - Errors if you switch between pause and unpause to quickly due to calculation lag 
+- Timer input box cannot detect the difference between letters and integers (will error if letter is entered)

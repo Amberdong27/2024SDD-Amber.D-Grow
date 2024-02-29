@@ -42,7 +42,9 @@ function selection() {
         '<li class="help-text">Error: If switch between pause and unpause to quickly. It will crash the timer</li>' +
         '<p class="help-text"><span style = "font-weight:bold">Solution:</span> Reload the Page </p>' +
         '<li class="help-text">Error: Graphics is not changing properly</li>' +
-        '<p class="help-text"> <span style = "font-weight:bold">Solution:</span> If this occurs you can either wait or reload the page and start the timer again </p>';
+        '<p class="help-text"> <span style = "font-weight:bold">Solution:</span> If this occurs you can either wait or reload the page and start the timer again </p>' +
+        '<li class="help-text">Error: Invalid/Wrong End Time due to entering a letter in input box or the incorrect time</li>' +
+        '<p class="help-text"><span style = "font-weight:bold">Solution:</span> You can reload page or end the timer early </p>';
 
         document.getElementById("helpContent").innerHTML = newContent;
       }
