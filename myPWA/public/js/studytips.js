@@ -34,7 +34,7 @@ fetch('./frontEndData.json')
     var option2 = document.getElementById("2");
     var option3 = document.getElementById("3");
    
-    if (value == "1") {
+    if (value == "1") { 
       option1.style.visibility = "visible";
       option2.style.visibility = "hidden";
       option3.style.visibility = "hidden";

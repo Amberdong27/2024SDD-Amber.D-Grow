@@ -1,7 +1,7 @@
 var taskArray = [];
 var deadlineArray = [];
 
-window.onload = function() {
+window.onload = function() { 
     loadTask();
 }
 
